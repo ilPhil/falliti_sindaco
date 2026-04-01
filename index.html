@@ -20,42 +20,50 @@
     ═══════════════════════════════════════ */
     @font-face {
       font-family: 'Barlow Condensed';
-      src: url('assets/font/Barlow_Condensed/BarlowCondensed-Black.ttf') format('truetype');
+      src: url('assets/fonts/barlow/barlow-black.woff') format('woff'),
+           url('assets/fonts/barlow/barlow-black.ttf') format('truetype');
       font-weight: 900; font-style: normal; font-display: swap;
     }
     @font-face {
       font-family: 'Barlow Condensed';
-      src: url('assets/font/Barlow_Condensed/BarlowCondensed-ExtraBold.ttf') format('truetype');
+      src: url('assets/fonts/barlow/barlow-extrabold.woff') format('woff'),
+           url('assets/fonts/barlow/barlow-extrabold.ttf') format('truetype');
       font-weight: 800; font-style: normal; font-display: swap;
     }
     @font-face {
       font-family: 'Barlow Condensed';
-      src: url('assets/font/Barlow_Condensed/BarlowCondensed-Bold.ttf') format('truetype');
+      src: url('assets/fonts/barlow/barlow-bold.woff') format('woff'),
+           url('assets/fonts/barlow/barlow-bold.ttf') format('truetype');
       font-weight: 700; font-style: normal; font-display: swap;
     }
     @font-face {
       font-family: 'Barlow Condensed';
-      src: url('assets/font/Barlow_Condensed/BarlowCondensed-SemiBold.ttf') format('truetype');
+      src: url('assets/fonts/barlow/barlow-semibold.woff') format('woff'),
+           url('assets/fonts/barlow/barlow-semibold.ttf') format('truetype');
       font-weight: 600; font-style: normal; font-display: swap;
     }
     @font-face {
       font-family: 'Barlow Condensed';
-      src: url('assets/font/Barlow_Condensed/BarlowCondensed-Regular.ttf') format('truetype');
+      src: url('assets/fonts/barlow/barlow-regular.woff') format('woff'),
+           url('assets/fonts/barlow/barlow-regular.ttf') format('truetype');
       font-weight: 400; font-style: normal; font-display: swap;
     }
     @font-face {
       font-family: 'PT Sans';
-      src: url('assets/font/PT_Sans/PTSans-Regular.ttf') format('truetype');
+      src: url('assets/fonts/ptsans/ptsans-regular.woff') format('woff'),
+           url('assets/fonts/ptsans/ptsans-regular.ttf') format('truetype');
       font-weight: 400; font-style: normal; font-display: swap;
     }
     @font-face {
       font-family: 'PT Sans';
-      src: url('assets/font/PT_Sans/PTSans-Italic.ttf') format('truetype');
+      src: url('assets/fonts/ptsans/ptsans-italic.woff') format('woff'),
+           url('assets/fonts/ptsans/ptsans-italic.ttf') format('truetype');
       font-weight: 400; font-style: italic; font-display: swap;
     }
     @font-face {
       font-family: 'PT Sans';
-      src: url('assets/font/PT_Sans/PTSans-Bold.ttf') format('truetype');
+      src: url('assets/fonts/ptsans/ptsans-bold.woff') format('woff'),
+           url('assets/fonts/ptsans/ptsans-bold.ttf') format('truetype');
       font-weight: 700; font-style: normal; font-display: swap;
     }
     /* ═══════════════════════════════════════
@@ -1430,7 +1438,7 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <a href="#" class="nav-logo">
-      <img src="assets/logo-peppefalliti.svg" alt="Peppe Falliti" class="nav-logo-script" />
+      <img src="assets/img/logo-peppefalliti.svg" alt="Peppe Falliti" class="nav-logo-script" />
     </a>
     <ul class="nav-links">
       <li><a href="#chi-e">Chi è Peppe</a></li>
@@ -1477,8 +1485,8 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="assets/logo-controcorrente.png" alt="" aria-hidden="true" class="hero-cc-watermark" />
-        <img src="assets/peppe-falliti-senza-sfondo.png" alt="Peppe Falliti candidato sindaco di Milazzo" class="hero-photo" />
+        <img src="assets/img/logo-controcorrente.png" alt="" aria-hidden="true" class="hero-cc-watermark" />
+        <img src="assets/img/peppe-hero.png" alt="Peppe Falliti candidato sindaco di Milazzo" class="hero-photo" />
       </div>
     </div>
   </section>
@@ -1517,7 +1525,7 @@
   <section class="section bio" id="chi-e">
     <div class="container">
       <div class="bio-grid">
-        <img src="assets/foto-amichevole.jpg" alt="Peppe Falliti" class="bio-photo reveal" />
+        <img src="assets/img/peppe-bio.jpg" alt="Peppe Falliti" class="bio-photo reveal" />
         <div>
           <div class="section-label reveal">Chi è</div>
           <div class="poster-title reveal">Peppe<br /><span class="hl">Falliti</span></div>
@@ -1708,7 +1716,7 @@
           </svg>
         </a>
       </div>
-      <img src="assets/peppe-ismaele-banner.jpg" alt="Peppe Falliti con Ismaele La Vardera" class="party-photo reveal" />
+      <img src="assets/img/peppe-ismaele.jpg" alt="Peppe Falliti con Ismaele La Vardera" class="party-photo reveal" />
     </div>
   </section>
 
@@ -1867,11 +1875,11 @@
   <footer class="footer">
     <div class="footer-left">
       <div class="footer-brand">
-        <img src="assets/logo-peppefalliti.svg" alt="Peppe Falliti" class="footer-script" />
+        <img src="assets/img/logo-peppefalliti.svg" alt="Peppe Falliti" class="footer-script" />
         <span class="footer-subtitle">Candidato Sindaco di Milazzo</span>
       </div>
       <span class="footer-divider">|</span>
-      <img src="assets/logo-controcorrente.png" alt="Controcorrente" class="footer-cc" />
+      <img src="assets/img/logo-controcorrente.png" alt="Controcorrente" class="footer-cc" />
       <span class="footer-info">Milazzo, Sicilia · Lista Controcorrente · Elezioni Comunali 2026</span>
     </div>
     <div class="footer-right">Pubblicità elettorale a cura del comitato "Peppe Falliti Sindaco" · <a href="http://www.peppefallitisindaco.it" style="color:inherit;">www.peppefallitisindaco.it</a></div>
