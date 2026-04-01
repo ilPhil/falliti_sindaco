@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peppe Falliti — Sindaco di Milazzo</title>
+  <meta name="description"
+    content="Peppe Falliti candidato sindaco di Milazzo. Milazzo merita di più. Controcorrente per una crescita sostenibile." />
+  <meta property="og:title" content="Peppe Falliti — Sindaco di Milazzo" />
+  <meta property="og:description" content="Milazzo merita di più. Controcorrente per una crescita sostenibile." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ═══════════════════════════════════════
+       LOCAL FONTS
+    ═══════════════════════════════════════ */
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/font/Barlow_Condensed/BarlowCondensed-Black.ttf') format('truetype');
+      font-weight: 900; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/font/Barlow_Condensed/BarlowCondensed-ExtraBold.ttf') format('truetype');
+      font-weight: 800; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/font/Barlow_Condensed/BarlowCondensed-Bold.ttf') format('truetype');
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/font/Barlow_Condensed/BarlowCondensed-SemiBold.ttf') format('truetype');
+      font-weight: 600; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/font/Barlow_Condensed/BarlowCondensed-Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'PT Sans';
+      src: url('assets/font/PT_Sans/PTSans-Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'PT Sans';
+      src: url('assets/font/PT_Sans/PTSans-Italic.ttf') format('truetype');
+      font-weight: 400; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'PT Sans';
+      src: url('assets/font/PT_Sans/PTSans-Bold.ttf') format('truetype');
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+    /* ═══════════════════════════════════════
+       RESET & VARIABLES
+    ═══════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --orange: #ee4124;
+      --orange-soft: #fef2ef;
+      --orange-mid: #fac4b8;
+      --black: #111;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-500: #6b7280;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --font-headline: 'Barlow Condensed', sans-serif;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-body: 'PT Sans', sans-serif;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
+      --radius: 12px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--gray-900);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    /* ═══════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 48px;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+
+    .nav.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-links a {
+      color: var(--gray-500);
+    }
+
+    .nav-burger span {
+      background: var(--gray-900);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-script {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: #cc2e12;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(238, 65, 36, 0.3);
+    }
+
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 28px;
+      cursor: pointer;
+    }
+
+    .nav-burger span {
+      height: 2px;
+      border-radius: 2px;
+      transition: all 0.3s var(--ease);
+    }
+
+    .nav-burger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-burger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-burger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s var(--ease);
+    }
+
+    .mobile-menu.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gray-900);
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--orange);
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    .hero {
+      height: 100vh;
+      min-height: 640px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-container {
+      display: contents;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px 6px 10px;
+      background: var(--orange-soft);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 4px 4px 0;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 32px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-tag svg {
+      width: 8px;
+      height: 8px;
+      color: var(--orange);
+    }
+
+    .hero-title {
+      font-family: var(--font-headline);
+      font-size: clamp(64px, 8vw, 112px);
+      font-weight: 900;
+      line-height: 0.85;
+      letter-spacing: 2px;
+      color: var(--gray-900);
+      margin-bottom: 28px;
+      padding-bottom: 48px;
+      opacity: 0;
+      transform: translateY(30px);
+      position: relative;
+      z-index: 4;
+    }
+
+    .hero-title .hl {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      padding: 4px 18px 8px;
+      line-height: 1;
+      transform: rotate(-8deg);
+      transform-origin: left center;
+      margin-left: 8px;
+      margin-bottom: -20px;
+      margin-top: 18px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--orange);
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--gray-500);
+      max-width: 460px;
+      line-height: 1.75;
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .hero-cc-watermark {
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 520px;
+      opacity: 0.13;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #cc2e12;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(238, 65, 36, 0.25);
+    }
+
+    .btn-primary svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--gray-100);
+      color: var(--gray-700);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--gray-200);
+    }
+
+    .hero-text-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 48px 80px 7vw;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Orange vertical stripe on left edge of the page */
+    .hero-text-col::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--orange);
+      z-index: 1;
+    }
+
+    /* Large faded city name across the full hero background */
+    .hero-bg-word {
+      position: absolute;
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(120px, 18vw, 260px);
+      color: var(--gray-900);
+      opacity: 0.04;
+      letter-spacing: 4px;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      bottom: 12%;
+      left: 3%;
+      z-index: 0;
+      line-height: 1;
+    }
+
+    .hero-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    /* Orange diagonal shape behind the photo */
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--orange-soft);
+      clip-path: polygon(18% 100%, 100% 55%, 100% 100%);
+      z-index: 0;
+    }
+
+    /* Small bold orange accent rectangle top-left of image panel */
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--orange);
+      z-index: 3;
+    }
+
+    .hero-photo {
+      position: relative;
+      z-index: 3;
+      width: 88%;
+      max-width: 540px;
+      height: 108%;
+      object-fit: contain;
+      object-position: center bottom;
+      display: block;
+      filter: drop-shadow(-8px 0 28px rgba(0,0,0,0.10));
+      margin-top: -8%;
+    }
+
+
+    /* ═══════════════════════════════════════
+       MARQUEE
+    ═══════════════════════════════════════ */
+    .marquee-wrapper {
+      overflow: hidden;
+      padding: 20px 0;
+      background: var(--orange);
+    }
+
+    .marquee-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: marquee 35s linear infinite;
+    }
+
+    .marquee-track span {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      white-space: nowrap;
+      padding: 0 16px;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .marquee-dot {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin: 0 16px;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ═══════════════════════════════════════
+       COMMON
+    ═══════════════════════════════════════ */
+    .section {
+      padding: 100px 48px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 4vw, 52px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      color: var(--gray-900);
+      margin-bottom: 16px;
+    }
+
+    /* Poster-style headline — matches the PDF print identity */
+    .poster-title {
+      font-family: var(--font-headline);
+      font-size: clamp(56px, 7vw, 100px);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: 1px;
+      color: var(--gray-900);
+      margin-bottom: 32px;
+    }
+
+    .poster-title.on-dark {
+      color: var(--white);
+    }
+
+    .poster-title .hl {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      padding: 0 12px 4px;
+      line-height: 1;
+    }
+
+    .section-text {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--gray-500);
+      max-width: 560px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════════════
+       BIO
+    ═══════════════════════════════════════ */
+    .bio {
+      background: var(--white);
+    }
+
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .bio-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 20px;
+      display: block;
+      background: #f0f0f0;
+    }
+
+    .bio-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--gray-900);
+      margin-bottom: 24px;
+      padding-left: 20px;
+      border-left: 3px solid var(--orange);
+    }
+
+    .bio-desc {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--gray-500);
+      margin-bottom: 40px;
+    }
+
+    .bio-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .bio-stat {
+      padding: 20px;
+      background: var(--gray-50);
+      border-radius: var(--radius);
+    }
+
+    .bio-stat-number {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .bio-stat-label {
+      font-size: 13px;
+      color: var(--gray-500);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* ═══════════════════════════════════════
+       VISION
+    ═══════════════════════════════════════ */
+    .vision {
+      background: var(--gray-50);
+    }
+
+    .vision .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .vision-big-text {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 3.5vw, 52px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0px;
+      color: var(--gray-900);
+    }
+
+    .vision-poster-title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      line-height: 0.88;
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(72px, 11vw, 148px);
+      letter-spacing: -1px;
+    }
+
+    .vpt-black {
+      display: block;
+      color: var(--gray-900);
+    }
+
+    .vpt-hl {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      padding: 4px 20px 10px;
+      margin-top: 6px;
+    }
+
+    .vision-big-text em {
+      font-style: normal;
+      color: var(--orange);
+    }
+
+    .vision-body {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--gray-500);
+    }
+
+    .vision-body p+p {
+      margin-top: 20px;
+    }
+
+    .vision-values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .vision-tag {
+      padding: 8px 18px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-700);
+      transition: all 0.3s;
+    }
+
+    .vision-tag:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+      background: var(--orange-soft);
+    }
+
+    /* ═══════════════════════════════════════
+       4 PILASTRI
+    ═══════════════════════════════════════ */
+    .pillars {
+      background: var(--white);
+    }
+
+    .pillars-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 64px;
+    }
+
+    .pillars-header .section-text {
+      margin: 0 auto;
+    }
+
+    .pillars-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .pillar-card {
+      flex: 0 0 calc(33.33% - 14px);
+      padding: 40px;
+      background: var(--gray-50);
+      border-radius: 16px;
+      border: 1px solid var(--gray-100);
+      transition: all 0.4s var(--ease);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .pillar-card:hover {
+      border-color: var(--orange-mid);
+      background: var(--orange-soft);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .pillar-number {
+      font-family: var(--font-display);
+      font-size: 80px;
+      font-weight: 800;
+      color: var(--gray-100);
+      position: absolute;
+      top: -8px;
+      right: 16px;
+      line-height: 1;
+      transition: color 0.4s;
+    }
+
+    .pillar-card:hover .pillar-number {
+      color: var(--orange-mid);
+    }
+
+    .pillar-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border-radius: 14px;
+      margin: 0 auto 24px;
+      color: var(--orange);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+    }
+
+    .pillar-card:hover .pillar-icon {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .pillar-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .pillar-desc {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--gray-500);
+      margin-bottom: 24px;
+    }
+
+    .pillar-points {
+      list-style: none;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .pillar-points li {
+      font-size: 14px;
+      color: var(--gray-600, #4b5563);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .pillar-points li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+
+    /* ═══════════════════════════════════════
+       NUMERI
+    ═══════════════════════════════════════ */
+    .stats {
+      background: #162840;
+      color: var(--white);
+    }
+
+    .stats .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .stats .section-label {
+      color: var(--orange);
+    }
+
+    .stats .section-title {
+      color: var(--white);
+    }
+
+    .stats .section-text {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .stat-item {
+      padding: 32px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s;
+    }
+
+    .stat-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+    }
+
+    /* ═══════════════════════════════════════
+       CONTROCORRENTE
+    ═══════════════════════════════════════ */
+    .party {
+      background: linear-gradient(135deg, var(--orange-soft) 0%, var(--white) 60%);
+    }
+
+    .party .container {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .party-manifesto {
+      font-size: 18px;
+      line-height: 1.85;
+      color: var(--gray-500);
+      margin-top: 20px;
+    }
+
+    .party-manifesto strong {
+      color: var(--gray-900);
+      font-weight: 600;
+    }
+
+    .party-manifesto em {
+      font-style: normal;
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    .party-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 32px;
+      padding: 14px 28px;
+      border: 2px solid var(--orange);
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--orange);
+      transition: all 0.3s;
+    }
+
+    .party-badge:hover {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .party-photo {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 20px;
+      display: block;
+    }
+
+    .party-cc-logo {
+      display: block;
+      width: 160px;
+      margin-bottom: 28px;
+      opacity: 0.9;
+    }
+
+    /* ═══════════════════════════════════════
+       PROGRAMMA ACCORDION
+    ═══════════════════════════════════════ */
+    .program {
+      background: var(--gray-50);
+    }
+
+    .program-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: flex-end;
+      margin-bottom: 48px;
+    }
+
+    .accordion-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      margin-bottom: 8px;
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .accordion-item.active {
+      border-color: var(--orange-mid);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 28px;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gray-900);
+      text-align: left;
+      transition: color 0.3s;
+    }
+
+    .accordion-header:hover {
+      color: var(--orange);
+    }
+
+    .accordion-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: var(--gray-100);
+      flex-shrink: 0;
+      transition: all 0.3s var(--ease);
+    }
+
+    .accordion-item.active .accordion-icon {
+      background: var(--orange);
+      transform: rotate(45deg);
+    }
+
+    .accordion-icon svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gray-500);
+    }
+
+    .accordion-item.active .accordion-icon svg {
+      color: var(--white);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s var(--ease);
+    }
+
+    .accordion-body-inner {
+      padding: 0 28px 24px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--gray-500);
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    .accordion-body-inner p {
+      margin-bottom: 8px;
+      break-inside: avoid;
+    }
+
+    .accordion-intro {
+      column-span: all;
+      font-style: italic;
+      color: var(--gray-700);
+      font-weight: 700;
+      border-left: 3px solid var(--orange);
+      padding-left: 12px;
+      margin-bottom: 16px !important;
+    }
+
+    /* ═══════════════════════════════════════
+       CTA
+    ═══════════════════════════════════════ */
+    .cta-section {
+      padding: 120px 48px;
+      text-align: center;
+      background: var(--white);
+      position: relative;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--orange-soft) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      color: var(--gray-900);
+      margin-bottom: 16px;
+    }
+
+    .cta-title em {
+      font-style: normal;
+      color: var(--orange);
+    }
+
+    .cta-subtitle {
+      font-size: 18px;
+      color: var(--gray-500);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border: 2px solid var(--gray-200);
+      color: var(--gray-700);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    .cta-social {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .cta-social a {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      color: var(--gray-500);
+      transition: all 0.3s;
+    }
+
+    .cta-social a:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+      background: var(--orange-soft);
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      padding: 32px 48px;
+      border-top: 1px solid var(--gray-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-left {
+      font-size: 13px;
+      color: var(--gray-500);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .footer-script {
+      height: 28px !important;
+      width: auto !important;
+      object-fit: contain;
+    }
+
+    .footer-subtitle {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray-500);
+    }
+
+    .footer-divider {
+      color: var(--gray-300);
+      font-size: 16px;
+    }
+
+    .footer-cc {
+      height: 32px !important;
+      width: 32px !important;
+      object-fit: contain;
+      opacity: 0.8;
+    }
+
+    .footer-info {
+      color: var(--gray-500);
+      font-size: 12px;
+    }
+
+    .footer-right {
+      font-size: 12px;
+      color: var(--gray-400);
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .section {
+        padding: 80px 32px;
+      }
+
+      .hero {
+        height: auto;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 460px;
+      }
+
+      .hero-bg-word {
+        font-size: 28vw;
+        bottom: 48%;
+      }
+
+      .hero-text-col {
+        padding: 110px 32px 48px;
+        justify-content: flex-end;
+      }
+
+      .hero-image {
+        min-height: 460px;
+      }
+
+      .hero-photo {
+        height: 100%;
+        width: 80%;
+        margin-top: 0;
+      }
+
+      .bio-grid,
+      .vision .container,
+      .stats .container,
+      .party .container,
+      .program-header {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .pillars-grid .pillar-card {
+        flex: 0 0 calc(50% - 10px);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .accordion-body-inner {
+        columns: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        padding: 0 24px;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-burger {
+        display: flex;
+      }
+
+      .hero-text-col {
+        padding: 100px 24px 40px;
+      }
+
+      .section {
+        padding: 64px 24px;
+      }
+
+      .bio-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .bio-stat {
+        padding: 16px;
+      }
+
+      .bio-stat-number {
+        font-size: 28px;
+      }
+
+      .pillars-grid .pillar-card {
+        flex: 0 0 100%;
+        padding: 32px 24px;
+      }
+
+      .stat-number {
+        font-size: 36px;
+      }
+
+      .stat-item {
+        padding: 24px;
+      }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons,
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-buttons a {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">
+      <img src="assets/logo_fabiana 0,90,100,0-02.svg" alt="Peppe Falliti" class="nav-logo-script" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#chi-e">Chi è Peppe</a></li>
+      <li><a href="#visione">Visione</a></li>
+      <li><a href="#programma-pilastri">Programma</a></li>
+      <li><a href="#controcorrente">Controcorrente</a></li>
+    </ul>
+    <a href="#partecipa" class="nav-cta">Partecipa</a>
+    <div class="nav-burger" id="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#chi-e" onclick="toggleMenu()">Chi è Peppe</a>
+    <a href="#visione" onclick="toggleMenu()">Visione</a>
+    <a href="#programma-pilastri" onclick="toggleMenu()">Programma</a>
+    <a href="#controcorrente" onclick="toggleMenu()">Controcorrente</a>
+    <a href="#partecipa" onclick="toggleMenu()">Partecipa</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <span class="hero-bg-word" aria-hidden="true">MILAZZO</span>
+    <div class="hero-container">
+      <div class="hero-text-col">
+        <div class="hero-tag">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="5" />
+          </svg>
+          Medico · Ambientalista · Candidato Sindaco
+        </div>
+        <h1 class="hero-title">Milazzo<br />merita<br /><span class="hl">di più.</span></h1>
+        <p class="hero-subtitle">Un patto per la crescita sostenibile. Collaborazione, rispetto e legalità: il futuro di Milazzo riparte dai suoi cittadini. Senza clientelismo, con le competenze al posto dei favori.</p>
+        <div class="hero-buttons">
+          <a href="#programma-pilastri" class="btn-primary">
+            Scopri il programma
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#chi-e" class="btn-secondary">Chi è Peppe Falliti</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/Logot_controcorrente.png" alt="" aria-hidden="true" class="hero-cc-watermark" />
+        <img src="assets/Copia di Peppe Falliti senza sfondo.png" alt="Peppe Falliti candidato sindaco di Milazzo" class="hero-photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>Milazzo merita di più</span>
+      <div class="marquee-dot"></div>
+      <span>Lottare x Restare</span>
+      <div class="marquee-dot"></div>
+      <span>Dignità, Lavoro, Salute</span>
+      <div class="marquee-dot"></div>
+      <span>Controcorrente</span>
+      <div class="marquee-dot"></div>
+      <span>Porte aperte ai cittadini</span>
+      <div class="marquee-dot"></div>
+      <span>Verità e Legalità</span>
+      <div class="marquee-dot"></div>
+      <span>Milazzo merita di più</span>
+      <div class="marquee-dot"></div>
+      <span>Lottare x Restare</span>
+      <div class="marquee-dot"></div>
+      <span>Dignità, Lavoro, Salute</span>
+      <div class="marquee-dot"></div>
+      <span>Controcorrente</span>
+      <div class="marquee-dot"></div>
+      <span>Porte aperte ai cittadini</span>
+      <div class="marquee-dot"></div>
+      <span>Verità e Legalità</span>
+      <div class="marquee-dot"></div>
+    </div>
+  </div>
+
+  <!-- CHI È PEPPE -->
+  <section class="section bio" id="chi-e">
+    <div class="container">
+      <div class="bio-grid">
+        <img src="assets/Foto_amichevole.jpg" alt="Peppe Falliti" class="bio-photo reveal" />
+        <div>
+          <div class="section-label reveal">Chi è</div>
+          <div class="poster-title reveal">Peppe<br /><span class="hl">Falliti</span></div>
+          <div class="bio-quote reveal">Medico, ambientalista ed attivista da sempre. Una vita dedicata alla cura delle persone e del patrimonio ambientale e culturale di Milazzo.</div>
+          <p class="bio-desc reveal">Giuseppe "Peppe" Falliti è milazzese doc, profondo conoscitore del territorio. Primario da 26 anni, ha dedicato la propria vita a prendersi cura delle persone. Storico attivista del WWF, ha combattuto — e vinto — battaglie decisive per la tutela ambientale della nostra città: dalla difesa della strada panoramica alle 20.000 firme per il referendum sul carbone, fino al riconoscimento dell'Area Marina Protetta. Con il movimento Controcorrente di Ismaele La Vardera, deputato ARS, porta avanti una politica senza clientelismo: trasparente, partecipata, al servizio di tutti.</p>
+          <div class="bio-stats reveal">
+            <div class="bio-stat">
+              <div class="bio-stat-number" data-count="26">26</div>
+              <div class="bio-stat-label">Anni come primario al servizio della comunità</div>
+            </div>
+            <div class="bio-stat">
+              <div class="bio-stat-number" data-count="40" data-suffix="+">40+</div>
+              <div class="bio-stat-label">Anni di attività per la tutela di Milazzo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIONE -->
+  <section class="section vision" id="visione">
+    <div class="container">
+      <div>
+        <div class="vision-poster-title reveal">
+          <span class="vpt-black">LA</span>
+          <span class="vpt-black">NOSTRA</span>
+          <span class="vpt-hl">VISIONE</span>
+        </div>
+      </div>
+      <div>
+        <div class="vision-body reveal">
+          <p>Un patto per una crescita sostenibile. Un gruppo di persone da sempre impegnate nel sociale, nella tutela ambientale e nella lotta alla illegalità, che ha deciso di mettere le proprie competenze e la propria passione al servizio di Milazzo. Collaborazione, gentilezza, rispetto e inclusione sono i valori fondanti del nostro progetto.</p>
+          <p><strong>STOP AL CLIENTELISMO.</strong> Ogni incarico sarà assegnato esclusivamente in base alle competenze. Rifiutiamo la cultura del favore: vogliamo un'amministrazione che lavora per tutti, non per pochi. Milazzo merita molto di più: adesso possiamo costruirlo. Insieme.</p>
+        </div>
+        <div class="vision-values reveal">
+          <span class="vision-tag">Collaborazione</span>
+          <span class="vision-tag">Legalità</span>
+          <span class="vision-tag">Inclusione</span>
+          <span class="vision-tag">Sostenibilità</span>
+          <span class="vision-tag">Gentilezza</span>
+          <span class="vision-tag">Rispetto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 PILASTRI -->
+  <section class="section pillars" id="programma-pilastri">
+    <div class="container">
+      <div class="pillars-header">
+        <div class="section-label reveal">Il programma</div>
+        <h2 class="poster-title reveal">Un programma<br /><span class="hl">condiviso</span></h2>
+        <p class="section-text reveal">Un programma costruito con i cittadini, per i cittadini. Cinque ambiti strategici per restituire dignità, lavoro e futuro alla nostra città.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-number">01</div>
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></div>
+          <h3 class="pillar-title">Sanità & Ambiente</h3>
+          <p class="pillar-desc">Rilancio dell'ospedale, medicina territoriale, osservatorio ambientale indipendente, bonifiche e riforestazione. La salute dei cittadini prima di tutto.</p>
+          <ul class="pillar-points">
+            <li>Rilancio Ospedale "G. Fogliani" e potenziamento reparti</li>
+            <li>Osservatorio Ambientale Civico con dati in tempo reale</li>
+            <li>Piano "Milazzo a Impatto Zero" e riconversione energetica</li>
+            <li>Bonifica aree industriali e riforestazione urbana</li>
+          </ul>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-number">02</div>
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg></div>
+          <h3 class="pillar-title">Lavoro, Economia & Bilancio</h3>
+          <p class="pillar-desc">Ridurre la pressione fiscale, sostenere PMI e commercio locale, diversificare l'economia verso green e blue economy. Nuova occupazione per i giovani.</p>
+          <ul class="pillar-points">
+            <li>Riduzione progressiva della pressione fiscale</li>
+            <li>Incentivi per PMI, artigianato e commercio locale</li>
+            <li>Diversificazione verso green e blue economy</li>
+            <li>Attrazione fondi europei e progetti per NEET</li>
+          </ul>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-number">03</div>
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg></div>
+          <h3 class="pillar-title">Servizi Sociali & Welfare</h3>
+          <p class="pillar-desc">Politiche concrete per giovani, anziani, famiglie e persone in difficoltà. Un welfare di prossimità che non lascia indietro nessuno.</p>
+          <ul class="pillar-points">
+            <li>Forum dei Giovani e politiche giovanili attive</li>
+            <li>Progetto "BenEssere Anziani" e socializzazione</li>
+            <li>Sostegno scolastico e doposcuola per studenti fragili</li>
+            <li>Servizi di prossimità nelle frazioni periferiche</li>
+          </ul>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-number">04</div>
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            </svg></div>
+          <h3 class="pillar-title">Cultura, Turismo, Sport & Giovani</h3>
+          <p class="pillar-desc">Trasformare Milazzo in un ecosistema culturale-turistico attivo tutto l'anno. Il Castello come cuore pulsante, le Eolie come partner strategico.</p>
+          <ul class="pillar-points">
+            <li>Castello come cuore culturale attivo 365 giorni</li>
+            <li>Destinazione Turistica Unica con Eolie e comuni vicini</li>
+            <li>Marketing territoriale e branding di Milazzo</li>
+            <li>Sport inclusivo e rete piste ciclabili</li>
+          </ul>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-number">05</div>
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg></div>
+          <h3 class="pillar-title">Urbanistica, Lavori Pubblici & Verde</h3>
+          <p class="pillar-desc">PUG come priorità assoluta. Riqualificazione del lungomare, decementificazione, illuminazione efficiente, marciapiedi sicuri e più verde urbano.</p>
+          <ul class="pillar-points">
+            <li>Piano Urbanistico Generale (PUG) come priorità assoluta</li>
+            <li>Valorizzazione e riqualificazione Lungomare di Ponente</li>
+            <li>Decementificazione e rinaturalizzazione urbana</li>
+            <li>Porto-città: integrazione urbanistica e logistica</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BATTAGLIE VINTE -->
+  <section class="section stats" id="numeri">
+    <div class="container">
+      <div>
+        <div class="section-label reveal">La storia parla chiara</div>
+        <h2 class="poster-title on-dark reveal">Le battaglie<br /><span class="hl">vinte</span></h2>
+        <p class="section-text reveal">Anni di impegno concreto per Milazzo. Battaglie reali, vinte sul campo, a difesa del territorio e dei cittadini.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="20" data-suffix="K">20K</div>
+          <div class="stat-label">Firme raccolte per il referendum sul carbone della centrale Enel</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" style="font-size: clamp(28px, 4vw, 48px); line-height: 1.1;">Strada<br/>Panoramica</div>
+          <div class="stat-label">Salvata grazie all'intervento del WWF contro la speculazione</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" style="font-size: clamp(28px, 4vw, 48px); line-height: 1.1;">Bosco<br/>Scifo</div>
+          <div class="stat-label">Protetto e valorizzato come patrimonio naturale della città</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Area Marina<br/>Protetta</div>
+          <div class="stat-label">Riconoscimento ottenuto per le acque di Milazzo e il suo mare</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Strada<br/>Capo-Tono</div>
+          <div class="stat-label">Difesa dall'urbanizzazione selvaggia grazie alla mobilitazione civica</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Depuratore<br/>Ponente</div>
+          <div class="stat-label">Battaglia vinta per la balneabilità della spiaggia di ponente</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROCORRENTE -->
+  <section class="section party" id="controcorrente">
+    <div class="container">
+      <div>
+        <div class="section-label reveal">Il movimento</div>
+        <h2 class="poster-title reveal">Contro<br /><span class="hl">corrente</span></h2>
+        <p class="party-manifesto reveal">
+          Andare controcorrente significa scegliere la via più difficile: quella della <em>verità</em> e della
+          <em>legalità</em>. Con <strong>Ismaele La Vardera</strong>, deputato dell'Assemblea Regionale Siciliana,
+          portiamo avanti una politica diversa: senza clientelismo, senza compromessi, con il coraggio di dire le cose
+          come stanno. Ogni incarico sarà assegnato esclusivamente in base alle competenze. Nessun favore. Nessuna rendita di posizione.
+        </p>
+        <a href="#partecipa" class="party-badge reveal">
+          Unisciti a noi
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <img src="assets/Copia di Peppe e Ismaele banner sfondo.jpg" alt="Peppe Falliti con Ismaele La Vardera" class="party-photo reveal" />
+    </div>
+  </section>
+
+  <!-- PROGRAMMA COMPLETO -->
+  <section class="section program" id="programma">
+    <div class="container">
+      <div class="program-header">
+        <div>
+          <div class="section-label reveal">Approfondisci</div>
+          <h2 class="poster-title reveal" style="font-size: clamp(48px, 6vw, 80px);">Il programma<br /><span class="hl">completo</span></h2>
+        </div>
+        <p class="section-text reveal">Cinque ambiti operativi per un patto concreto con Milazzo. Clicca su ciascun
+          ambito per esplorare le proposte nel dettaglio.</p>
+      </div>
+      <div class="reveal">
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">Sanità e Ambiente<span
+              class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></span></button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="accordion-intro">Presenza incisiva nella conferenza dei Sindaci per la sanità. Rilancio dell'ospedale, progetto "la salute a casa tua", prevenzione ambientale e monitoraggio dell'aria, osservatorio civico, bonifiche e transizione energetica.</p>
+              <p>Rilancio dell'Ospedale "G. Fogliani" con potenziamento dei reparti e piano straordinario delle assunzioni.</p>
+              <p>Progetto "La salute a casa tua": medicina territoriale, screening periodici e prevenzione delle patologie ambientali.</p>
+              <p>Presenza incisiva nella Conferenza dei Sindaci per la sanità del territorio.</p>
+              <p>Osservatorio Ambientale Civico indipendente con monitoraggio dell'aria in tempo reale.</p>
+              <p>Piano "Milazzo a Impatto Zero": bonifica aree industriali dismesse e transizione energetica.</p>
+              <p>Piano Urbano del Verde: riforestazione urbana, censimento arboreo, tutela del patrimonio naturale.</p>
+              <p>Mobilità sostenibile: marebus, rete ciclabile, mezzi elettrici, pedonalizzazioni selettive.</p>
+              <p>Assemblea cittadina permanente sul clima e l'ambiente.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">Lavoro, Economia e Bilancio<span
+              class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></span></button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="accordion-intro">Riduzione pressione fiscale, sostegno al commercio e PMI, agricoltura, pesca e artigianato, porto come risorsa. L'economia cresce valorizzando vocazioni storiche e innovazione sostenibile. NO a modelli turistici artificiali.</p>
+              <p>Riduzione progressiva e strutturale della pressione fiscale sui cittadini e sulle imprese.</p>
+              <p>Incentivi per PMI, commercio locale, artigianato, agricoltura e pesca di qualità.</p>
+              <p>Porto di Milazzo come risorsa economica e logistica da valorizzare pienamente.</p>
+              <p>Diversificazione verso green economy e blue economy, rispettando le vocazioni del territorio.</p>
+              <p>Attrazione di fondi europei, statali e regionali con progettazione strutturata.</p>
+              <p>Progetti per NEET e innovazione nell'apprendistato e nel lavoro giovanile.</p>
+              <p>Digitalizzazione delle attività commerciali e supporto all'e-commerce locale.</p>
+              <p>NO a modelli turistici artificiali: turismo di qualità, radicato nel territorio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">Servizi Sociali e Welfare<span
+              class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></span></button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="accordion-intro">Welfare, tutele per giovani, famiglie, anziani e persone fragili. Agevolazioni alle giovani coppie, politiche per la famiglia a sostegno delle fasce deboli, interventi a favore delle persone con disabilità. Servizio volontario comunale, canile e gattile dignitosi.</p>
+              <p>Agevolazioni concrete alle giovani coppie per l'accesso alla casa e al lavoro.</p>
+              <p>Politiche familiari integrate a sostegno delle fasce più deboli.</p>
+              <p>Interventi mirati a favore delle persone con disabilità e dei loro caregiver.</p>
+              <p>Forum dei Giovani attivo con investimenti in politiche giovanili partecipate.</p>
+              <p>Progetto "BenEssere Anziani": spazi di socializzazione e attività intergenerazionali.</p>
+              <p>Sostegno scolastico e doposcuola per studenti con fragilità educative o sociali.</p>
+              <p>Servizio volontario comunale e servizi di prossimità nelle frazioni periferiche.</p>
+              <p>Canile e gattile comunali dignitosi e servizi di cura degli animali.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">Cultura, Turismo, Sport e Giovani<span
+              class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></span></button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="accordion-intro">Come la cultura crea il turismo. Progetti per giovani, istruzione, nomadi digitali e Destinazione Turistica Unica, turismo di qualità, borghi, mare, tradizioni, beni culturali e cultura viva. Sport come inclusione, salute e qualità della vita.</p>
+              <p>Castello di Milazzo come cuore culturale attivo tutto l'anno, non solo d'estate.</p>
+              <p>Destinazione Turistica Unica Milazzo-Eolie: marketing territoriale e branding condiviso.</p>
+              <p>Turismo di qualità: borghi, mare, tradizioni, beni culturali e itinerari tematici.</p>
+              <p>Progetti per i giovani: istruzione, creatività, nomadi digitali e spazi di innovazione.</p>
+              <p>Laboratori creativi, coworking e promozione dell'artigianato locale di qualità.</p>
+              <p>Sport come inclusione sociale, salute e qualità della vita per tutte le fasce d'età.</p>
+              <p>Cinema all'aperto, eventi nelle frazioni, valorizzazione delle tradizioni locali.</p>
+              <p>Rete di piste ciclabili e impianti sportivi eco-sostenibili.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">Urbanistica, Lavori Pubblici, Verde e Infrastrutture<span
+              class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></span></button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="accordion-intro">Redazione del nuovo PUG come motore di rinascita territoriale. Nuovi parcheggi, risoluzione dei problemi di traffico, riqualificazione delle frazioni, Porto-città integrato e recupero del patrimonio storico.</p>
+              <p>PUG – Piano Urbanistico Generale come priorità assoluta: stop alla cementificazione selvaggia.</p>
+              <p>Riqualificazione del Lungomare di Ponente: arredo urbano, aree gioco, illuminazione, panchine.</p>
+              <p>Decementificazione e rinaturalizzazione delle aree urbanizzate in eccesso.</p>
+              <p>Nuovi parcheggi a pagamento e risoluzione strutturale dei problemi di traffico.</p>
+              <p>Sistemazione dei marciapiedi dissestati e potenziamento delle aree pedonali.</p>
+              <p>Porto-città: integrazione urbanistica e logistica tra il porto e il centro storico.</p>
+              <p>Efficientamento energetico dell'illuminazione pubblica in tutto il territorio.</p>
+              <p>Riqualificazione e valorizzazione delle frazioni periferiche.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section" id="partecipa">
+    <div class="cta-content">
+      <div class="section-label reveal" style="justify-content:center;">Perché questa candidatura</div>
+      <h2 class="poster-title reveal" style="font-size: clamp(52px, 7vw, 88px);">Milazzo<br />merita <span class="hl">di più.</span></h2>
+      <p class="cta-subtitle reveal">Peppe Falliti non è un politico ma un cittadino che si prende la responsabilità di costruire il cambiamento. Con la tua voce, la tua energia, le tue idee — adesso possiamo farlo davvero. Insieme.</p>
+      <div class="cta-buttons reveal">
+        <a href="#" class="btn-outline">Contattaci <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg></a>
+      </div>
+      <div class="cta-social reveal">
+        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg></a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="5" />
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+          </svg></a>
+        <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.37-6.22V9.4a8.16 8.16 0 0 0 3.85.96V7.04a4.85 4.85 0 0 1-.59-.05l.59-.3z" />
+          </svg></a>
+        <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.68 31.68 0 0 0 0 12a31.68 31.68 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.84.55 9.38.55 9.38.55s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.68 31.68 0 0 0 24 12a31.68 31.68 0 0 0-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+          </svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="footer-brand">
+        <img src="assets/logo_fabiana 0,90,100,0-02.svg" alt="Peppe Falliti" class="footer-script" />
+        <span class="footer-subtitle">Candidato Sindaco di Milazzo</span>
+      </div>
+      <span class="footer-divider">|</span>
+      <img src="assets/Logot_controcorrente.png" alt="Controcorrente" class="footer-cc" />
+      <span class="footer-info">Milazzo, Sicilia · Lista Controcorrente · Elezioni Comunali 2026</span>
+    </div>
+    <div class="footer-right">Pubblicità elettorale a cura del comitato "Peppe Falliti Sindaco" · <a href="http://www.peppefallitisindaco.it" style="color:inherit;">www.peppefallitisindaco.it</a></div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    window.addEventListener('load', () => {
+      const els = document.querySelectorAll('.hero-tag, .hero-title, .hero-subtitle, .hero-buttons');
+      els.forEach((el, i) => {
+        setTimeout(() => {
+          el.style.transition = 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 200 + i * 120);
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10); });
+    function toggleMenu() {
+      document.getElementById('burger').classList.toggle('active');
+      document.getElementById('mobileMenu').classList.toggle('active');
+      document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('active') ? 'hidden' : '';
+    }
+    function toggleAccordion(btn) {
+      const item = btn.parentElement;
+      const body = item.querySelector('.accordion-body');
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.accordion-item').forEach(i => { i.classList.remove('active'); i.querySelector('.accordion-body').style.maxHeight = null; });
+      if (!isActive) { item.classList.add('active'); body.style.maxHeight = body.scrollHeight + 'px'; }
+    }
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        if (!target) return;
+        const duration = 1800;
+        const startTime = performance.now();
+        const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // easeInOut
+        const animate = (now) => {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const value = Math.floor(ease(progress) * target);
+          el.textContent = value.toLocaleString('it-IT') + suffix;
+          if (progress < 1) requestAnimationFrame(animate);
+          else el.textContent = target.toLocaleString('it-IT') + suffix;
+        };
+        requestAnimationFrame(animate);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) { const t = document.querySelector(this.getAttribute('href')); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
+    });
+  </script>
+</body>
+
+</html>       
