@@ -374,7 +374,7 @@
       transform: translate(-50%, -50%);
       width: 100%;
       max-width: 520px;
-      opacity: 0.13;
+      opacity: 0.5;
       pointer-events: none;
       z-index: 1;
     }
@@ -429,17 +429,7 @@
       z-index: 2;
     }
 
-    /* Orange vertical stripe on left edge of the page */
-    .hero-text-col::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 5px;
-      height: 100%;
-      background: var(--orange);
-      z-index: 1;
-    }
+    /* Orange vertical stripe rimossa */
 
     /* Large faded city name across the full hero background */
     .hero-bg-word {
@@ -478,17 +468,7 @@
       z-index: 0;
     }
 
-    /* Small bold orange accent rectangle top-left of image panel */
-    .hero-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background: var(--orange);
-      z-index: 3;
-    }
+    /* Orange accent image panel rimossa */
 
     .hero-photo {
       position: relative;
@@ -1428,8 +1408,23 @@
 
       .footer {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         padding: 24px;
+      }
+
+      .footer-left {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footer-divider {
+        display: none;
+      }
+
+      .footer-right {
+        text-align: center;
       }
     }
 
@@ -1489,7 +1484,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor">
             <circle cx="12" cy="12" r="5" />
           </svg>
-          Medico · Ambientalista · Candidato Sindaco
+          Candidato Sindaco
         </div>
         <h1 class="hero-title">Milazzo<br />merita<br /><span class="hl">di più.</span></h1>
         <p class="hero-subtitle">Un patto per la crescita sostenibile. Collaborazione, rispetto e legalità: il futuro di Milazzo riparte dai suoi cittadini. Senza clientelismo, con le competenze al posto dei favori.</p>
@@ -1895,7 +1890,6 @@
     <div class="footer-left">
       <div class="footer-brand">
         <img src="assets/img/logo-peppefalliti.svg" alt="Peppe Falliti" class="footer-script" />
-        <span class="footer-subtitle">Candidato Sindaco di Milazzo</span>
       </div>
       <span class="footer-divider">|</span>
       <img src="assets/img/logo-controcorrente.png" alt="Controcorrente" class="footer-cc" />
