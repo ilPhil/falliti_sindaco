@@ -334,7 +334,7 @@
       color: var(--white);
       padding: 4px 18px 8px;
       line-height: 1;
-      transform: rotate(-8deg);
+      transform: rotate(-7deg);
       transform-origin: left center;
       margin-left: 8px;
       margin-bottom: -20px;
@@ -373,8 +373,8 @@
       left: 30%;
       transform: translate(-50%, -50%);
       width: 100%;
-      max-width: 520px;
-      opacity: 0.5;
+      max-width: 340px;
+      opacity: 0.13;
       pointer-events: none;
       z-index: 1;
     }
@@ -778,6 +778,11 @@
       margin: 0 auto;
     }
 
+    .pillars-cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
     .pillars-grid {
       display: flex;
       flex-wrap: wrap;
@@ -787,8 +792,8 @@
     }
 
     .pillar-card {
-      flex: 0 0 calc(33.33% - 14px);
-      padding: 40px;
+      flex: 0 0 calc(25% - 16px);
+      padding: 32px 28px;
       background: var(--gray-50);
       border-radius: 16px;
       border: 1px solid var(--gray-100);
@@ -855,10 +860,10 @@
     }
 
     .pillar-desc {
-      font-size: 15px;
-      line-height: 1.75;
+      font-size: 14px;
+      line-height: 1.65;
       color: var(--gray-500);
-      margin-bottom: 24px;
+      margin-bottom: 0;
     }
 
     .pillar-points {
@@ -1097,27 +1102,52 @@
     }
 
     .accordion-body-inner {
-      padding: 0 28px 24px;
+      padding: 4px 32px 36px;
       font-size: 15px;
-      line-height: 1.8;
+      line-height: 1.75;
       color: var(--gray-500);
-      columns: 2;
-      column-gap: 40px;
-    }
-
-    .accordion-body-inner p {
-      margin-bottom: 8px;
-      break-inside: avoid;
     }
 
     .accordion-intro {
-      column-span: all;
       font-style: italic;
       color: var(--gray-700);
-      font-weight: 700;
+      font-weight: 600;
       border-left: 3px solid var(--orange);
-      padding-left: 12px;
-      margin-bottom: 16px !important;
+      padding: 14px 16px;
+      margin-bottom: 28px;
+      background: var(--gray-50);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .accordion-body-inner ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 40px;
+    }
+
+    .accordion-body-inner ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-700);
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+
+    .accordion-body-inner ul li::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      background: var(--orange);
+      border-radius: 50%;
+      margin-top: 6px;
     }
 
     /* ═══════════════════════════════════════
@@ -1337,8 +1367,8 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .accordion-body-inner {
-        columns: 1;
+      .accordion-body-inner ul {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -1593,83 +1623,77 @@
       <div class="pillars-header">
         <div class="section-label reveal">Il programma</div>
         <h2 class="poster-title reveal">Un programma<br /><span class="hl">condiviso</span></h2>
-        <p class="section-text reveal">Un programma costruito con i cittadini, per i cittadini. Cinque ambiti strategici per restituire dignità, lavoro e futuro alla nostra città.</p>
+        <p class="section-text reveal">Un programma costruito con i cittadini, per i cittadini. Otto ambiti strategici per restituire dignità, lavoro e futuro alla nostra città.</p>
       </div>
       <div class="pillars-grid">
         <div class="pillar-card reveal">
-          <div class="pillar-number">01</div>
           <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
             </svg></div>
-          <h3 class="pillar-title">Sanità & Ambiente</h3>
-          <p class="pillar-desc">Rilancio dell'ospedale, medicina territoriale, osservatorio ambientale indipendente, bonifiche e riforestazione. La salute dei cittadini prima di tutto.</p>
-          <ul class="pillar-points">
-            <li>Rilancio Ospedale "G. Fogliani" e potenziamento reparti</li>
-            <li>Osservatorio Ambientale Civico con dati in tempo reale</li>
-            <li>Piano "Milazzo a Impatto Zero" e riconversione energetica</li>
-            <li>Bonifica aree industriali e riforestazione urbana</li>
-          </ul>
+          <h3 class="pillar-title">Sanità e Ambiente</h3>
+          <p class="pillar-desc">Rilancio dell'ospedale, prevenzione ambientale e transizione energetica per una città più sana.</p>
         </div>
         <div class="pillar-card reveal">
-          <div class="pillar-number">02</div>
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            </svg></div>
+          <h3 class="pillar-title">Cultura, Turismo e Sport</h3>
+          <p class="pillar-desc">Castello attivo tutto l'anno, Destinazione Turistica Unica e sport come inclusione sociale.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg></div>
+          <h3 class="pillar-title">Affari Generali</h3>
+          <p class="pillar-desc">Un Comune accessibile, trasparente e digitale, con sportelli decentrati e partecipazione civica strutturata.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg></div>
+          <h3 class="pillar-title">Lavori Pubblici e Servizi a Rete</h3>
+          <p class="pillar-desc">Risoluzione degli annosi problemi, cura del patrimonio e piantumazione di alberi e nuovi parchi.</p>
+        </div>
+        <div class="pillar-card reveal">
           <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 2L2 7l10 5 10-5-10-5z" />
               <path d="M2 17l10 5 10-5" />
               <path d="M2 12l10 5 10-5" />
             </svg></div>
-          <h3 class="pillar-title">Lavoro, Economia & Bilancio</h3>
-          <p class="pillar-desc">Ridurre la pressione fiscale, sostenere PMI e commercio locale, diversificare l'economia verso green e blue economy. Nuova occupazione per i giovani.</p>
-          <ul class="pillar-points">
-            <li>Riduzione progressiva della pressione fiscale</li>
-            <li>Incentivi per PMI, artigianato e commercio locale</li>
-            <li>Diversificazione verso green e blue economy</li>
-            <li>Attrazione fondi europei e progetti per NEET</li>
-          </ul>
+          <h3 class="pillar-title">Lavoro, Economia e Bilancio</h3>
+          <p class="pillar-desc">Meno tasse, più coworking, sostegno a PMI, artigianato, pesca e porto come risorsa economica.</p>
         </div>
         <div class="pillar-card reveal">
-          <div class="pillar-number">03</div>
           <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
             </svg></div>
-          <h3 class="pillar-title">Servizi Sociali & Welfare</h3>
-          <p class="pillar-desc">Politiche concrete per giovani, anziani, famiglie e persone in difficoltà. Un welfare di prossimità che non lascia indietro nessuno.</p>
-          <ul class="pillar-points">
-            <li>Forum dei Giovani e politiche giovanili attive</li>
-            <li>Progetto "BenEssere Anziani" e socializzazione</li>
-            <li>Sostegno scolastico e doposcuola per studenti fragili</li>
-            <li>Servizi di prossimità nelle frazioni periferiche</li>
-          </ul>
+          <h3 class="pillar-title">Servizi Sociali e Welfare</h3>
+          <p class="pillar-desc">Welfare forte per giovani, famiglie, anziani e fragili, con mensa comunale e wifi cittadino.</p>
         </div>
         <div class="pillar-card reveal">
-          <div class="pillar-number">04</div>
           <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg></div>
-          <h3 class="pillar-title">Cultura, Turismo, Sport & Giovani</h3>
-          <p class="pillar-desc">Trasformare Milazzo in un ecosistema culturale-turistico attivo tutto l'anno. Il Castello come cuore pulsante, le Eolie come partner strategico.</p>
-          <ul class="pillar-points">
-            <li>Castello come cuore culturale attivo 365 giorni</li>
-            <li>Destinazione Turistica Unica con Eolie e comuni vicini</li>
-            <li>Marketing territoriale e branding di Milazzo</li>
-            <li>Sport inclusivo e rete piste ciclabili</li>
-          </ul>
+          <h3 class="pillar-title">Polizia Comunale</h3>
+          <p class="pillar-desc">Politica sanzionatoria trasparente, vigile di quartiere e lotta alle discariche abusive.</p>
         </div>
         <div class="pillar-card reveal">
-          <div class="pillar-number">05</div>
           <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
+              <polygon points="3 11 22 2 13 21 11 13 3 11"/>
             </svg></div>
-          <h3 class="pillar-title">Urbanistica, Lavori Pubblici & Verde</h3>
-          <p class="pillar-desc">PUG come priorità assoluta. Riqualificazione del lungomare, decementificazione, illuminazione efficiente, marciapiedi sicuri e più verde urbano.</p>
-          <ul class="pillar-points">
-            <li>Piano Urbanistico Generale (PUG) come priorità assoluta</li>
-            <li>Valorizzazione e riqualificazione Lungomare di Ponente</li>
-            <li>Decementificazione e rinaturalizzazione urbana</li>
-            <li>Porto-città: integrazione urbanistica e logistica</li>
-          </ul>
+          <h3 class="pillar-title">Urbanistica e Territorio</h3>
+          <p class="pillar-desc">Nuovo PUG, mobilità sostenibile, riapertura del Porto e verde come identità urbana.</p>
         </div>
+      </div>
+      <div class="pillars-cta reveal">
+        <a href="#programma" class="btn-primary">
+          Vai al programma
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
@@ -1680,32 +1704,32 @@
       <div>
         <div class="section-label reveal">La storia parla chiara</div>
         <h2 class="poster-title on-dark reveal">Le battaglie<br /><span class="hl">vinte</span></h2>
-        <p class="section-text reveal">Anni di impegno concreto per Milazzo. Battaglie reali, vinte sul campo, a difesa del territorio e dei cittadini.</p>
+        <p class="section-text reveal">Durante l'attività ultratrentennale della sezione WWF di Milazzo, il nostro gruppo, oltre alle numerose proposte di salvaguardia e sviluppo sostenibile del territorio, ha ottenuto, con energia e determinazione, grandi e concreti risultati, che hanno migliorato la qualità della vita nel nostro comprensorio e da cui tutti oggi possono trarre giovamento.</p>
       </div>
       <div class="stats-grid">
         <div class="stat-item reveal">
-          <div class="stat-number" data-count="20" data-suffix="K">20K</div>
-          <div class="stat-label">Firme raccolte per il referendum sul carbone della centrale Enel</div>
+          <div class="stat-number" data-count="20000" data-suffix="">20.000</div>
+          <div class="stat-label">Firme raccolte per indire il primo referendum siciliano (vinto) contro la trasformazione a carbone della centrale Enel</div>
         </div>
         <div class="stat-item reveal">
-          <div class="stat-number" style="font-size: clamp(28px, 4vw, 48px); line-height: 1.1;">Strada<br/>Panoramica</div>
-          <div class="stat-label">Salvata grazie all'intervento del WWF contro la speculazione</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" style="font-size: clamp(28px, 4vw, 48px); line-height: 1.1;">Bosco<br/>Scifo</div>
-          <div class="stat-label">Protetto e valorizzato come patrimonio naturale della città</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Area Marina<br/>Protetta</div>
-          <div class="stat-label">Riconoscimento ottenuto per le acque di Milazzo e il suo mare</div>
+          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Strada<br/>Panoramica</div>
+          <div class="stat-label">Ricorso vinto contro la prosecuzione della strada dentro la Fondazione Lucifero, fino ai gradini dell'estrema punta del Capo</div>
         </div>
         <div class="stat-item reveal">
           <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Strada<br/>Capo-Tono</div>
-          <div class="stat-label">Difesa dall'urbanizzazione selvaggia grazie alla mobilitazione civica</div>
+          <div class="stat-label">Ricorso vinto contro la costruzione della strada tra Via Porticella e Piazza dell'Addolorata, con distruzione del costone roccioso</div>
         </div>
         <div class="stat-item reveal">
           <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Depuratore<br/>Ponente</div>
-          <div class="stat-label">Battaglia vinta per la balneabilità della spiaggia di ponente</div>
+          <div class="stat-label">Ricorso vinto contro la costruzione del depuratore sulla spiaggia di ponente</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Bosco<br/>Scifo</div>
+          <div class="stat-label">Manifestazioni e conseguente salvataggio del Bosco Scifo a Santa Lucia del Mela</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Area Marina<br/>Protetta</div>
+          <div class="stat-label">Prima proposta dell'Area Marina Protetta di Capo Milazzo alla Regione e al Ministero dell'Ambiente</div>
         </div>
       </div>
     </div>
@@ -1740,10 +1764,9 @@
       <div class="program-header">
         <div>
           <div class="section-label reveal">Approfondisci</div>
-          <h2 class="poster-title reveal" style="font-size: clamp(48px, 6vw, 80px);">Il programma<br /><span class="hl">completo</span></h2>
+          <h2 class="poster-title reveal" style="font-size: clamp(48px, 6vw, 80px);">Il<br /><span class="hl">programma</span></h2>
         </div>
-        <p class="section-text reveal">Cinque ambiti operativi per un patto concreto con Milazzo. Clicca su ciascun
-          ambito per esplorare le proposte nel dettaglio.</p>
+        <p class="section-text reveal">Otto ambiti operativi per un patto concreto con Milazzo. Clicca su ciascun ambito per esplorare le proposte nel dettaglio.</p>
       </div>
       <div class="reveal">
         <div class="accordion-item">
@@ -1754,15 +1777,78 @@
               </svg></span></button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
-              <p class="accordion-intro">Presenza incisiva nella conferenza dei Sindaci per la sanità. Rilancio dell'ospedale, progetto "la salute a casa tua", prevenzione ambientale e monitoraggio dell'aria, osservatorio civico, bonifiche e transizione energetica.</p>
-              <p>Rilancio dell'Ospedale "G. Fogliani" con potenziamento dei reparti e piano straordinario delle assunzioni.</p>
-              <p>Progetto "La salute a casa tua": medicina territoriale, screening periodici e prevenzione delle patologie ambientali.</p>
-              <p>Presenza incisiva nella Conferenza dei Sindaci per la sanità del territorio.</p>
-              <p>Osservatorio Ambientale Civico indipendente con monitoraggio dell'aria in tempo reale.</p>
-              <p>Piano "Milazzo a Impatto Zero": bonifica aree industriali dismesse e transizione energetica.</p>
-              <p>Piano Urbano del Verde: riforestazione urbana, censimento arboreo, tutela del patrimonio naturale.</p>
-              <p>Mobilità sostenibile: marebus, rete ciclabile, mezzi elettrici, pedonalizzazioni selettive.</p>
-              <p>Assemblea cittadina permanente sul clima e l'ambiente.</p>
+              <p class="accordion-intro">Presenza incisiva nella conferenza dei Sindaci per la sanità. Rilancio dell'ospedale, riportare le ambulanze a Milazzo, gestione dei TSO efficace, potenziamento del supporto psicologico comunale; progetto "la salute a casa tua", prevenzione ambientale e monitoraggio dell'aria, osservatorio civico, bonifiche e transizione energetica, controllo costante della qualità delle acque.</p>
+              <ul>
+              <li>Presenza incisiva nella Conferenza dei Sindaci per la sanità del territorio.</li>
+              <li>Rilancio dell'ospedale e riportare le ambulanze a Milazzo.</li>
+              <li>Gestione dei TSO efficace e potenziamento del supporto psicologico comunale.</li>
+              <li>Progetto "La salute a casa tua": prevenzione e medicina di prossimità.</li>
+              <li>Prevenzione ambientale e monitoraggio costante della qualità dell'aria.</li>
+              <li>Osservatorio civico indipendente per la tutela dell'ambiente.</li>
+              <li>Bonifiche delle aree inquinate e transizione energetica.</li>
+              <li>Controllo costante della qualità delle acque.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">Cultura, Beni Culturali, Turismo e Sport<span
+              class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></span></button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="accordion-intro">Castello attivo tutto l'anno, eventi diffusi, istruzione, nomadi digitali e Destinazione Turistica Unica. Turismo di qualità, un ufficio Marketing per la promozione turistica. Migliorare il rapporto con le Eolie. Sostenere le frazioni, mare, tradizioni, beni culturali e cultura viva. Sport come inclusione, salute e qualità della vita. NO a modelli turistici artificiosi.</p>
+              <ul>
+              <li>Castello di Milazzo attivo tutto l'anno con eventi culturali diffusi.</li>
+              <li>Destinazione Turistica Unica Milazzo-Eolie: branding e marketing territoriale condiviso.</li>
+              <li>Ufficio Marketing dedicato alla promozione turistica della città.</li>
+              <li>Turismo di qualità: mare, tradizioni, beni culturali e itinerari tematici.</li>
+              <li>Sostegno alle frazioni e valorizzazione della cultura locale viva.</li>
+              <li>Istruzione, nomadi digitali e spazi di innovazione per i giovani.</li>
+              <li>Sport come inclusione sociale, salute e qualità della vita.</li>
+              <li>NO a modelli turistici artificiosi: sviluppo radicato nel territorio.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">Affari Generali<span
+              class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></span></button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="accordion-intro">Rendere il Comune realmente accessibile e trasparente attraverso URP e digitalizzazione, sito web semplificato, sportelli decentrati e partecipazione civica strutturata.</p>
+              <ul>
+              <li>Potenziamento dell'URP per un rapporto diretto e reale tra cittadini e amministrazione.</li>
+              <li>Digitalizzazione dei servizi comunali e sito web semplificato e accessibile.</li>
+              <li>Sportelli decentrati nelle frazioni per avvicinare i servizi ai cittadini.</li>
+              <li>Partecipazione civica strutturata: ascolto continuo e decisioni condivise.</li>
+              <li>Trasparenza nella gestione pubblica come valore fondante dell'amministrazione.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">Lavori Pubblici e Servizi a Rete<span
+              class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg></span></button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="accordion-intro">Priorità alla risoluzione degli annosi problemi (allagamenti ecc.) e focus su ciò che davvero migliora la vivibilità. Riqualificazione servizi a rete, cura del patrimonio, del lungomare, dell'arredo urbano, dell'efficientamento energetico e delle strutture sportive. Piantumazione di alberi e creazione di nuovi parchi. Attivazione di un canale per la segnalazione di disservizi e guasti.</p>
+              <ul>
+              <li>Risoluzione degli annosi problemi di allagamenti e criticità infrastrutturali.</li>
+              <li>Riqualificazione dei servizi a rete: acqua, fognature e rete elettrica.</li>
+              <li>Cura del patrimonio pubblico, del lungomare e dell'arredo urbano.</li>
+              <li>Efficientamento energetico delle strutture sportive e degli edifici comunali.</li>
+              <li>Piantumazione di alberi e creazione di nuovi parchi urbani.</li>
+              <li>Canale dedicato per la segnalazione di disservizi e guasti da parte dei cittadini.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1774,15 +1860,15 @@
               </svg></span></button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
-              <p class="accordion-intro">Riduzione pressione fiscale, sostegno al commercio e PMI, agricoltura, pesca e artigianato, porto come risorsa. L'economia cresce valorizzando vocazioni storiche e innovazione sostenibile. NO a modelli turistici artificiali.</p>
-              <p>Riduzione progressiva e strutturale della pressione fiscale sui cittadini e sulle imprese.</p>
-              <p>Incentivi per PMI, commercio locale, artigianato, agricoltura e pesca di qualità.</p>
-              <p>Porto di Milazzo come risorsa economica e logistica da valorizzare pienamente.</p>
-              <p>Diversificazione verso green economy e blue economy, rispettando le vocazioni del territorio.</p>
-              <p>Attrazione di fondi europei, statali e regionali con progettazione strutturata.</p>
-              <p>Progetti per NEET e innovazione nell'apprendistato e nel lavoro giovanile.</p>
-              <p>Digitalizzazione delle attività commerciali e supporto all'e-commerce locale.</p>
-              <p>NO a modelli turistici artificiali: turismo di qualità, radicato nel territorio.</p>
+              <p class="accordion-intro">Riduzione pressione fiscale, centri di incubazione di progetti e coworking, sostegno a commercio e PMI, agricoltura, pesca e artigianato, porto come risorsa. L'economia cresce valorizzando vocazioni storiche e innovazione sostenibile.</p>
+              <ul>
+              <li>Riduzione della pressione fiscale sui cittadini e sulle imprese.</li>
+              <li>Centri di incubazione di progetti e spazi coworking per startup e freelance.</li>
+              <li>Sostegno concreto a commercio, PMI, agricoltura, pesca e artigianato locale.</li>
+              <li>Porto di Milazzo come risorsa economica e logistica da valorizzare.</li>
+              <li>Economia che cresce valorizzando le vocazioni storiche del territorio.</li>
+              <li>Innovazione sostenibile come leva per nuova occupazione e sviluppo.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1794,55 +1880,54 @@
               </svg></span></button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
-              <p class="accordion-intro">Welfare, tutele per giovani, famiglie, anziani e persone fragili. Agevolazioni alle giovani coppie, politiche per la famiglia a sostegno delle fasce deboli, interventi a favore delle persone con disabilità. Servizio volontario comunale, canile e gattile dignitosi.</p>
-              <p>Agevolazioni concrete alle giovani coppie per l'accesso alla casa e al lavoro.</p>
-              <p>Politiche familiari integrate a sostegno delle fasce più deboli.</p>
-              <p>Interventi mirati a favore delle persone con disabilità e dei loro caregiver.</p>
-              <p>Forum dei Giovani attivo con investimenti in politiche giovanili partecipate.</p>
-              <p>Progetto "BenEssere Anziani": spazi di socializzazione e attività intergenerazionali.</p>
-              <p>Sostegno scolastico e doposcuola per studenti con fragilità educative o sociali.</p>
-              <p>Servizio volontario comunale e servizi di prossimità nelle frazioni periferiche.</p>
-              <p>Canile e gattile comunali dignitosi e servizi di cura degli animali.</p>
+              <p class="accordion-intro">Formazione, Welfare forte per giovani, famiglie, anziani, persone con disabilità e fragili. Agevolazioni alle giovani coppie, politiche per le famiglie e sostegno delle fasce deboli, mensa comunale. Aiuto concreto dei senzatetto. Servizio veterinario comunale, canile e gattile dignitosi. Un servizio funzionante di connessione wifi cittadino.</p>
+              <ul>
+              <li>Agevolazioni alle giovani coppie e politiche di sostegno alle famiglie.</li>
+              <li>Welfare forte per anziani, persone con disabilità e fasce fragili.</li>
+              <li>Mensa comunale e aiuto concreto per le persone senza dimora.</li>
+              <li>Formazione e opportunità per i giovani del territorio.</li>
+              <li>Servizio veterinario comunale, canile e gattile dignitosi.</li>
+              <li>Rete wifi cittadina funzionante e accessibile a tutti.</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">Cultura, Turismo, Sport e Giovani<span
+          <button class="accordion-header" onclick="toggleAccordion(this)">Polizia Comunale<span
               class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <line x1="5" y1="12" x2="19" y2="12" />
               </svg></span></button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
-              <p class="accordion-intro">Come la cultura crea il turismo. Progetti per giovani, istruzione, nomadi digitali e Destinazione Turistica Unica, turismo di qualità, borghi, mare, tradizioni, beni culturali e cultura viva. Sport come inclusione, salute e qualità della vita.</p>
-              <p>Castello di Milazzo come cuore culturale attivo tutto l'anno, non solo d'estate.</p>
-              <p>Destinazione Turistica Unica Milazzo-Eolie: marketing territoriale e branding condiviso.</p>
-              <p>Turismo di qualità: borghi, mare, tradizioni, beni culturali e itinerari tematici.</p>
-              <p>Progetti per i giovani: istruzione, creatività, nomadi digitali e spazi di innovazione.</p>
-              <p>Laboratori creativi, coworking e promozione dell'artigianato locale di qualità.</p>
-              <p>Sport come inclusione sociale, salute e qualità della vita per tutte le fasce d'età.</p>
-              <p>Cinema all'aperto, eventi nelle frazioni, valorizzazione delle tradizioni locali.</p>
-              <p>Rete di piste ciclabili e impianti sportivi eco-sostenibili.</p>
+              <p class="accordion-intro">Una politica sanzionatoria meno repressiva e più trasparente. Istituzione del vigile di quartiere, un controllo efficace e severo contro le discariche abusive.</p>
+              <ul>
+              <li>Politica sanzionatoria meno repressiva e più trasparente nei confronti dei cittadini.</li>
+              <li>Istituzione del vigile di quartiere per una presenza capillare sul territorio.</li>
+              <li>Controllo efficace e severo contro le discariche abusive.</li>
+              <li>Presidio del territorio orientato alla prevenzione e al dialogo con la comunità.</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">Urbanistica, Lavori Pubblici, Verde e Infrastrutture<span
+          <button class="accordion-header" onclick="toggleAccordion(this)">Urbanistica e Territorio<span
               class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <line x1="5" y1="12" x2="19" y2="12" />
               </svg></span></button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
-              <p class="accordion-intro">Redazione del nuovo PUG come motore di rinascita territoriale. Nuovi parcheggi, risoluzione dei problemi di traffico, riqualificazione delle frazioni, Porto-città integrato e recupero del patrimonio storico.</p>
-              <p>PUG – Piano Urbanistico Generale come priorità assoluta: stop alla cementificazione selvaggia.</p>
-              <p>Riqualificazione del Lungomare di Ponente: arredo urbano, aree gioco, illuminazione, panchine.</p>
-              <p>Decementificazione e rinaturalizzazione delle aree urbanizzate in eccesso.</p>
-              <p>Nuovi parcheggi a pagamento e risoluzione strutturale dei problemi di traffico.</p>
-              <p>Sistemazione dei marciapiedi dissestati e potenziamento delle aree pedonali.</p>
-              <p>Porto-città: integrazione urbanistica e logistica tra il porto e il centro storico.</p>
-              <p>Efficientamento energetico dell'illuminazione pubblica in tutto il territorio.</p>
-              <p>Riqualificazione e valorizzazione delle frazioni periferiche.</p>
+              <p class="accordion-intro">Redazione del nuovo PUG come motore di rinascita territoriale. Meno parcheggi a pagamento e risoluzione problema traffico, mobilità sostenibile. Attivare un dialogo per la riapertura e la fruizione del Porto. Piano del Verde e censimento arboreo, tutela della biodiversità e creazione di parchi. Il verde diventa parte integrante dell'identità urbana, non un arredo artificiale. Recupero del rapporto autentico tra cittadini e natura, valorizzando i paesaggi tradizionali e gli antichi percorsi.</p>
+              <ul>
+              <li>Redazione del nuovo Piano Urbanistico Generale (PUG) come motore di rinascita.</li>
+              <li>Meno parcheggi a pagamento e risoluzione strutturale del problema traffico.</li>
+              <li>Mobilità sostenibile: percorsi ciclabili, pedonalizzazioni e trasporto pubblico.</li>
+              <li>Dialogo per la riapertura e la piena fruizione del Porto di Milazzo.</li>
+              <li>Piano del Verde e censimento arboreo per la tutela della biodiversità.</li>
+              <li>Creazione di nuovi parchi: il verde come identità urbana, non un arredo artificiale.</li>
+              <li>Valorizzazione dei paesaggi tradizionali e degli antichi percorsi del territorio.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1864,22 +1949,17 @@
           </svg></a>
       </div>
       <div class="cta-social reveal">
-        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <a href="https://www.facebook.com/labi.laboratoristiitaliani" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
           </svg></a>
-        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+        <a href="https://www.instagram.com/peppefalliti.sindaco/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2">
             <rect x="2" y="2" width="20" height="20" rx="5" />
             <circle cx="12" cy="12" r="5" />
             <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
           </svg></a>
         <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.37-6.22V9.4a8.16 8.16 0 0 0 3.85.96V7.04a4.85 4.85 0 0 1-.59-.05l.59-.3z" />
-          </svg></a>
-        <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.68 31.68 0 0 0 0 12a31.68 31.68 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.84.55 9.38.55 9.38.55s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.68 31.68 0 0 0 24 12a31.68 31.68 0 0 0-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.37-6.22V9.4a8.16 8.16 0 0 0 3.85.96V7.04a4.85 4.85 0 0 1-.59-.05l.59-.3z" />
           </svg></a>
       </div>
     </div>
@@ -1958,4 +2038,4 @@
   </script>
 </body>
 
-</html>       
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
