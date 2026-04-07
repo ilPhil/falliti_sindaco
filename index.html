@@ -328,6 +328,12 @@
       z-index: 4;
     }
 
+    .hero-title .hl-top {
+      display: block;
+      position: relative;
+      z-index: 3;
+    }
+
     .hero-title .hl {
       display: inline-block;
       background: var(--orange);
@@ -579,12 +585,20 @@
       color: var(--white);
     }
 
+    .poster-title .hl-top {
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
     .poster-title .hl {
       display: inline-block;
       background: var(--orange);
       color: var(--white);
       padding: 0 12px 4px;
       line-height: 1;
+      position: relative;
+      z-index: 1;
     }
 
     .section-text {
@@ -904,8 +918,62 @@
     .stats .container {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      gap: 64px;
-      align-items: center;
+      grid-template-rows: auto auto;
+      gap: 48px 64px;
+      align-items: start;
+    }
+
+    .stats-text {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .stats-grid-wrap {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .stats-wwf-wrap {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
+    .stats-wwf-wrap {
+      position: relative;
+    }
+
+    .stats-wwf-photo {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+      filter: grayscale(15%) sepia(10%);
+      transition: filter 0.4s;
+      clip-path: polygon(
+        0% 6%, 2% 3%, 4% 7%, 7% 1%, 10% 5%, 13% 2%, 16% 6%, 19% 1%,
+        22% 5%, 25% 2%, 28% 6%, 31% 0%, 34% 5%, 37% 2%, 40% 6%, 43% 1%,
+        46% 5%, 49% 2%, 52% 6%, 55% 1%, 58% 5%, 61% 2%, 64% 6%, 67% 0%,
+        70% 5%, 73% 2%, 76% 6%, 79% 1%, 82% 5%, 85% 2%, 88% 6%, 91% 1%,
+        94% 5%, 97% 2%, 100% 6%,
+        100% 94%, 97% 98%, 94% 95%, 91% 100%, 88% 96%, 85% 99%, 82% 95%,
+        79% 100%, 76% 96%, 73% 99%, 70% 95%, 67% 100%, 64% 96%, 61% 99%,
+        58% 95%, 55% 100%, 52% 96%, 49% 99%, 46% 95%, 43% 100%, 40% 96%,
+        37% 99%, 34% 95%, 31% 100%, 28% 96%, 25% 99%, 22% 95%, 19% 100%,
+        16% 96%, 13% 99%, 10% 95%, 7% 100%, 4% 96%, 2% 99%, 0% 94%
+      );
+    }
+
+    .stats-wwf-photo:hover {
+      filter: grayscale(0%) sepia(0%);
+    }
+
+    .stats-wwf-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      font-style: italic;
+      margin-top: 12px;
+      line-height: 1.5;
+      text-align: center;
     }
 
     .stats .section-label {
@@ -1363,6 +1431,14 @@
         flex: 0 0 calc(50% - 10px);
       }
 
+      .stats .container {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-right {
+        gap: 20px;
+      }
+
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1507,7 +1583,7 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <span class="hero-bg-word" aria-hidden="true">MILAZZO</span>
+    <span class="hero-bg-word" aria-hidden="true">SINDACO</span>
     <div class="hero-container">
       <div class="hero-text-col">
         <div class="hero-tag">
@@ -1516,8 +1592,8 @@
           </svg>
           Candidato Sindaco
         </div>
-        <h1 class="hero-title">Milazzo<br />merita<br /><span class="hl">di più.</span></h1>
-        <p class="hero-subtitle">Un patto per la crescita sostenibile. Collaborazione, rispetto e legalità: il futuro di Milazzo riparte dai suoi cittadini. Senza clientelismo, con le competenze al posto dei favori.</p>
+        <h1 class="hero-title"><span class="hl-top">Milazzo<br />merita</span><span class="hl">di più.</span></h1>
+        <p class="hero-subtitle">Un patto per la crescita sostenibile. Dignità, collaborazione, rispetto e legalità: il futuro di Milazzo riparte dai suoi cittadini. Senza clientelismo, con le competenze al posto dei favori.</p>
         <div class="hero-buttons">
           <a href="#programma-pilastri" class="btn-primary">
             Scopri il programma
@@ -1572,7 +1648,7 @@
         <img src="assets/img/peppe-bio.jpg" alt="Peppe Falliti" class="bio-photo reveal" />
         <div>
           <div class="section-label reveal">Chi è</div>
-          <div class="poster-title reveal">Peppe<br /><span class="hl">Falliti</span></div>
+          <div class="poster-title reveal"><span class="hl-top">Peppe</span><span class="hl">Falliti</span></div>
           <div class="bio-quote reveal">Medico, ambientalista ed attivista da sempre. Una vita dedicata alla cura delle persone e del patrimonio ambientale e culturale di Milazzo.</div>
           <p class="bio-desc reveal">Giuseppe "Peppe" Falliti è milazzese doc, profondo conoscitore del territorio. Primario da 26 anni, ha dedicato la propria vita a prendersi cura delle persone. Storico attivista del WWF, ha combattuto — e vinto — battaglie decisive per la tutela ambientale della nostra città: dalla difesa della strada panoramica alle 20.000 firme per il referendum sul carbone, fino al riconoscimento dell'Area Marina Protetta. Con il movimento Controcorrente di Ismaele La Vardera, deputato ARS, porta avanti una politica senza clientelismo: trasparente, partecipata, al servizio di tutti.</p>
           <div class="bio-stats reveal">
@@ -1617,12 +1693,12 @@
     </div>
   </section>
 
-  <!-- 4 PILASTRI -->
+  <!-- 4 PILASTRI
   <section class="section pillars" id="programma-pilastri">
     <div class="container">
       <div class="pillars-header">
         <div class="section-label reveal">Il programma</div>
-        <h2 class="poster-title reveal">Un programma<br /><span class="hl">condiviso</span></h2>
+        <h2 class="poster-title reveal"><span class="hl-top">Un programma</span><span class="hl">condiviso</span></h2>
         <p class="section-text reveal">Un programma costruito con i cittadini, per i cittadini. Otto ambiti strategici per restituire dignità, lavoro e futuro alla nostra città.</p>
       </div>
       <div class="pillars-grid">
@@ -1696,41 +1772,47 @@
         </a>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- BATTAGLIE VINTE -->
   <section class="section stats" id="numeri">
     <div class="container">
-      <div>
+      <div class="stats-text">
         <div class="section-label reveal">La storia parla chiara</div>
-        <h2 class="poster-title on-dark reveal">Le battaglie<br /><span class="hl">vinte</span></h2>
+        <h2 class="poster-title on-dark reveal"><span class="hl-top">Le battaglie</span><span class="hl">vinte</span></h2>
         <p class="section-text reveal">Durante l'attività ultratrentennale della sezione WWF di Milazzo, il nostro gruppo, oltre alle numerose proposte di salvaguardia e sviluppo sostenibile del territorio, ha ottenuto, con energia e determinazione, grandi e concreti risultati, che hanno migliorato la qualità della vita nel nostro comprensorio e da cui tutti oggi possono trarre giovamento.</p>
       </div>
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <div class="stat-number" data-count="20000" data-suffix="">20.000</div>
-          <div class="stat-label">Firme raccolte per indire il primo referendum siciliano (vinto) contro la trasformazione a carbone della centrale Enel</div>
+      <div class="stats-grid-wrap">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-number" data-count="20000" data-suffix="">20.000</div>
+            <div class="stat-label">Firme raccolte per indire il primo referendum siciliano (vinto) contro la trasformazione a carbone della centrale Enel</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Strada<br/>Panoramica</div>
+            <div class="stat-label">Ricorso vinto contro la prosecuzione della strada dentro la Fondazione Lucifero, fino ai gradini dell'estrema punta del Capo</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Strada<br/>Capo-Tono</div>
+            <div class="stat-label">Ricorso vinto contro la costruzione della strada tra Via Porticella e Piazza dell'Addolorata, con distruzione del costone roccioso</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Depuratore<br/>Ponente</div>
+            <div class="stat-label">Ricorso vinto contro la costruzione del depuratore sulla spiaggia di ponente</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Bosco<br/>Scifo</div>
+            <div class="stat-label">Manifestazioni e conseguente salvataggio del Bosco Scifo a Santa Lucia del Mela</div>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Area Marina<br/>Protetta</div>
+            <div class="stat-label">Prima proposta dell'Area Marina Protetta di Capo Milazzo alla Regione e al Ministero dell'Ambiente</div>
+          </div>
         </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Strada<br/>Panoramica</div>
-          <div class="stat-label">Ricorso vinto contro la prosecuzione della strada dentro la Fondazione Lucifero, fino ai gradini dell'estrema punta del Capo</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Strada<br/>Capo-Tono</div>
-          <div class="stat-label">Ricorso vinto contro la costruzione della strada tra Via Porticella e Piazza dell'Addolorata, con distruzione del costone roccioso</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Depuratore<br/>Ponente</div>
-          <div class="stat-label">Ricorso vinto contro la costruzione del depuratore sulla spiaggia di ponente</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Bosco<br/>Scifo</div>
-          <div class="stat-label">Manifestazioni e conseguente salvataggio del Bosco Scifo a Santa Lucia del Mela</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" style="font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1;">Area Marina<br/>Protetta</div>
-          <div class="stat-label">Prima proposta dell'Area Marina Protetta di Capo Milazzo alla Regione e al Ministero dell'Ambiente</div>
-        </div>
+      </div>
+      <div class="stats-wwf-wrap reveal">
+        <img src="assets/img/wwf.jpeg" alt="Peppe Falliti con il gruppo WWF Milazzo" class="stats-wwf-photo" />
+        <p class="stats-wwf-caption">Peppe Falliti con i volontari della sezione WWF di Milazzo durante una delle tante iniziative di tutela ambientale del territorio.</p>
       </div>
     </div>
   </section>
@@ -1740,7 +1822,7 @@
     <div class="container">
       <div>
         <div class="section-label reveal">Il movimento</div>
-        <h2 class="poster-title reveal">Contro<br /><span class="hl">corrente</span></h2>
+        <h2 class="poster-title reveal"><span class="hl-top">Contro</span><span class="hl">corrente</span></h2>
         <p class="party-manifesto reveal">
           Andare controcorrente significa scegliere la via più difficile: quella della <em>verità</em> e della
           <em>legalità</em>. Con <strong>Ismaele La Vardera</strong>, deputato dell'Assemblea Regionale Siciliana,
@@ -1764,7 +1846,7 @@
       <div class="program-header">
         <div>
           <div class="section-label reveal">Approfondisci</div>
-          <h2 class="poster-title reveal" style="font-size: clamp(48px, 6vw, 80px);">Il<br /><span class="hl">programma</span></h2>
+          <h2 class="poster-title reveal" style="font-size: clamp(48px, 6vw, 80px);"><span class="hl-top">Il</span><span class="hl">programma</span></h2>
         </div>
         <p class="section-text reveal">Otto ambiti operativi per un patto concreto con Milazzo. Clicca su ciascun ambito per esplorare le proposte nel dettaglio.</p>
       </div>
@@ -1939,7 +2021,7 @@
   <section class="section cta-section" id="partecipa">
     <div class="cta-content">
       <div class="section-label reveal" style="justify-content:center;">Perché questa candidatura</div>
-      <h2 class="poster-title reveal" style="font-size: clamp(52px, 7vw, 88px);">Milazzo<br />merita <span class="hl">di più.</span></h2>
+      <h2 class="poster-title reveal" style="font-size: clamp(52px, 7vw, 88px);"><span class="hl-top">Milazzo<br />merita</span><span class="hl">di più.</span></h2>
       <p class="cta-subtitle reveal">Peppe Falliti non è un politico ma un cittadino che si prende la responsabilità di costruire il cambiamento. Con la tua voce, la tua energia, le tue idee — adesso possiamo farlo davvero. Insieme.</p>
       <div class="cta-buttons reveal">
         <a href="#" class="btn-outline">Contattaci <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -2038,4 +2120,4 @@
   </script>
 </body>
 
-</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+</html>
