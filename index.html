@@ -1000,6 +1000,7 @@
       border-radius: var(--radius);
       border: 1px solid rgba(255, 255, 255, 0.08);
       transition: all 0.3s;
+      min-width: 0;
     }
 
     .stat-item:hover {
@@ -1014,6 +1015,8 @@
       color: var(--orange);
       line-height: 1;
       margin-bottom: 8px;
+      word-break: break-word;
+      overflow-wrap: anywhere;
     }
 
     .stat-label {
@@ -1435,6 +1438,21 @@
         grid-template-columns: 1fr;
       }
 
+      .stats-text {
+        grid-column: 1;
+        grid-row: auto;
+      }
+
+      .stats-grid-wrap {
+        grid-column: 1;
+        grid-row: auto;
+      }
+
+      .stats-wwf-wrap {
+        grid-column: 1;
+        grid-row: auto;
+      }
+
       .stats-right {
         gap: 20px;
       }
@@ -1539,6 +1557,21 @@
         grid-template-columns: 1fr;
       }
 
+      .stat-number {
+        font-size: clamp(20px, 7vw, 36px);
+        word-break: break-word;
+        hyphens: auto;
+      }
+
+      .stat-item {
+        padding: 20px 16px;
+      }
+
+      .stats-wwf-photo {
+        clip-path: none;
+        border-radius: 12px;
+      }
+
       .cta-buttons,
       .hero-buttons {
         flex-direction: column;
@@ -1605,8 +1638,14 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="assets/img/logo-controcorrente.png" alt="" aria-hidden="true" class="hero-cc-watermark" />
-        <img src="assets/img/peppe-hero.png" alt="Peppe Falliti candidato sindaco di Milazzo" class="hero-photo" />
+        <picture>
+          <source srcset="assets/img/logo-controcorrente.webp" type="image/webp" />
+          <img src="assets/img/logo-controcorrente.png" alt="" aria-hidden="true" class="hero-cc-watermark" />
+        </picture>
+        <picture>
+          <source srcset="assets/img/peppe-hero.webp" type="image/webp" />
+          <img src="assets/img/peppe-hero.png" alt="Peppe Falliti candidato sindaco di Milazzo" class="hero-photo" />
+        </picture>
       </div>
     </div>
   </section>
@@ -1645,7 +1684,10 @@
   <section class="section bio" id="chi-e">
     <div class="container">
       <div class="bio-grid">
-        <img src="assets/img/peppe-bio.jpg" alt="Peppe Falliti" class="bio-photo reveal" />
+        <picture class="bio-photo reveal">
+          <source srcset="assets/img/peppe-bio.webp" type="image/webp" />
+          <img src="assets/img/peppe-bio.jpg" alt="Peppe Falliti" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+        </picture>
         <div>
           <div class="section-label reveal">Chi è</div>
           <div class="poster-title reveal"><span class="hl-top">Peppe</span><span class="hl">Falliti</span></div>
@@ -1811,7 +1853,10 @@
         </div>
       </div>
       <div class="stats-wwf-wrap reveal">
-        <img src="assets/img/wwf.jpeg" alt="Peppe Falliti con il gruppo WWF Milazzo" class="stats-wwf-photo" />
+        <picture>
+          <source srcset="assets/img/wwf.webp" type="image/webp" />
+          <img src="assets/img/wwf.jpeg" alt="Peppe Falliti con il gruppo WWF Milazzo" class="stats-wwf-photo" />
+        </picture>
         <p class="stats-wwf-caption">Peppe Falliti con i volontari della sezione WWF di Milazzo durante una delle tante iniziative di tutela ambientale del territorio.</p>
       </div>
     </div>
@@ -1836,7 +1881,10 @@
           </svg>
         </a>
       </div>
-      <img src="assets/img/peppe-ismaele.jpg" alt="Peppe Falliti con Ismaele La Vardera" class="party-photo reveal" />
+      <picture class="party-photo reveal">
+        <source srcset="assets/img/peppe-ismaele.webp" type="image/webp" />
+        <img src="assets/img/peppe-ismaele.jpg" alt="Peppe Falliti con Ismaele La Vardera" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;" />
+      </picture>
     </div>
   </section>
 
@@ -2054,7 +2102,10 @@
         <img src="assets/img/logo-peppefalliti.svg" alt="Peppe Falliti" class="footer-script" />
       </div>
       <span class="footer-divider">|</span>
-      <img src="assets/img/logo-controcorrente.png" alt="Controcorrente" class="footer-cc" />
+      <picture>
+        <source srcset="assets/img/logo-controcorrente.webp" type="image/webp" />
+        <img src="assets/img/logo-controcorrente.png" alt="Controcorrente" class="footer-cc" />
+      </picture>
       <span class="footer-info">Milazzo, Sicilia · Lista Controcorrente · Elezioni Comunali 2026</span>
     </div>
     <div class="footer-right">Pubblicità elettorale a cura del comitato "Peppe Falliti Sindaco" · <a href="http://www.peppefallitisindaco.it" style="color:inherit;">www.peppefallitisindaco.it</a></div>
