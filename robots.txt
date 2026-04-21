@@ -6,15 +6,6 @@ Allow: /
 Disallow: /.claude/
 Disallow: /.git/
 
-# Consenti esplicitamente asset statici (alcuni bot li bloccano)
-Allow: /assets/
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.webp$
-Allow: /*.svg$
-Allow: /*.jpg$
-Allow: /*.png$
-
 # Bot AI — consenti indicizzazione per visibilita in risposte generative
 User-agent: GPTBot
 Allow: /
@@ -30,15 +21,5 @@ Allow: /
 
 User-agent: ClaudeBot
 Allow: /
-
-# Bot aggressivi / scraping SEO — limitiamo per proteggere banda
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
-User-agent: MJ12bot
-Crawl-delay: 10
 
 Sitemap: https://peppefallitisindaco.it/sitemap.xml

@@ -223,23 +223,92 @@
       },
       {
         "@type": "Event",
+        "@id": "https://peppefallitisindaco.it/#elezioni-2026",
         "name": "Elezioni Comunali Milazzo 2026",
-        "description": "Elezioni comunali di Milazzo 2026. Peppe Falliti candidato sindaco con il movimento Controcorrente di Ismaele La Vardera. Programma condiviso per restituire dignità, lavoro e futuro a Milazzo.",
-        "startDate": "2026",
+        "description": "Elezioni comunali della citta di Milazzo. Seggi aperti domenica 24 maggio 2026 dalle 07:00 alle 23:00 e lunedi 25 maggio 2026 dalle 07:00 alle 15:00. Eventuale ballottaggio domenica 7 e lunedi 8 giugno 2026. Peppe Falliti candidato sindaco con il movimento Controcorrente di Ismaele La Vardera.",
+        "startDate": "2026-05-24T07:00:00+02:00",
+        "endDate": "2026-05-25T15:00:00+02:00",
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "organizer": {
-          "@id": "https://peppefallitisindaco.it/#candidate"
-        },
+        "image": [
+          "https://peppefallitisindaco.it/assets/img/og-social-v2.jpg",
+          "https://peppefallitisindaco.it/assets/img/peppe-hero.png"
+        ],
         "location": {
-          "@type": "City",
-          "name": "Milazzo",
+          "@type": "Place",
+          "name": "Seggi elettorali del Comune di Milazzo",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Milazzo",
             "addressRegion": "Messina",
             "postalCode": "98057",
             "addressCountry": "IT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.2234,
+            "longitude": 15.2401
+          }
+        },
+        "organizer": {
+          "@type": "GovernmentOrganization",
+          "name": "Comune di Milazzo",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Milazzo",
+            "addressRegion": "Messina",
+            "postalCode": "98057",
+            "addressCountry": "IT"
+          }
+        },
+        "performer": {
+          "@id": "https://peppefallitisindaco.it/#candidate"
+        },
+        "offers": {
+          "@type": "Offer",
+          "name": "Partecipazione al voto (gratuita per i cittadini aventi diritto)",
+          "url": "https://peppefallitisindaco.it/",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2026-04-22T00:00:00+02:00"
+        },
+        "subEvent": {
+          "@type": "Event",
+          "@id": "https://peppefallitisindaco.it/#ballottaggio-2026",
+          "name": "Eventuale ballottaggio Elezioni Comunali Milazzo 2026",
+          "description": "Eventuale ballottaggio per l'elezione del sindaco di Milazzo, in caso nessun candidato superi la soglia al primo turno. Seggi aperti domenica 7 giugno 2026 dalle 07:00 alle 23:00 e lunedi 8 giugno 2026 dalle 07:00 alle 15:00.",
+          "startDate": "2026-06-07T07:00:00+02:00",
+          "endDate": "2026-06-08T15:00:00+02:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "image": "https://peppefallitisindaco.it/assets/img/og-social-v2.jpg",
+          "location": {
+            "@type": "Place",
+            "name": "Seggi elettorali del Comune di Milazzo",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Milazzo",
+              "addressRegion": "Messina",
+              "postalCode": "98057",
+              "addressCountry": "IT"
+            }
+          },
+          "organizer": {
+            "@type": "GovernmentOrganization",
+            "name": "Comune di Milazzo"
+          },
+          "performer": {
+            "@id": "https://peppefallitisindaco.it/#candidate"
+          },
+          "offers": {
+            "@type": "Offer",
+            "name": "Partecipazione al voto (gratuita per i cittadini aventi diritto)",
+            "url": "https://peppefallitisindaco.it/",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-05-26T00:00:00+02:00"
           }
         }
       },
@@ -333,14 +402,34 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
-    rel="stylesheet" />
   <style>
     /* ═══════════════════════════════════════
        LOCAL FONTS
     ═══════════════════════════════════════ */
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('assets/fonts/playfair/playfair-700.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('assets/fonts/playfair/playfair-800.woff2') format('woff2');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('assets/fonts/playfair/playfair-italic-700.woff2') format('woff2');
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+    }
+
     @font-face {
       font-family: 'Barlow Condensed';
       src: url('assets/fonts/barlow/barlow-black.woff') format('woff'),
