@@ -1,4 +1,44 @@
+# robots.txt — peppefallitisindaco.it
+# Sito ufficiale della campagna elettorale di Peppe Falliti, candidato sindaco di Milazzo 2026
+
 User-agent: *
 Allow: /
+Disallow: /.claude/
+Disallow: /.git/
 
-Sitemap: https://www.peppefallitisindaco.it/sitemap.xml
+# Consenti esplicitamente asset statici (alcuni bot li bloccano)
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.jpg$
+Allow: /*.png$
+
+# Bot AI — consenti indicizzazione per visibilita in risposte generative
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Bot aggressivi / scraping SEO — limitiamo per proteggere banda
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+Sitemap: https://peppefallitisindaco.it/sitemap.xml

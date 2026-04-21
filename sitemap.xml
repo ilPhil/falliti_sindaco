@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
     <loc>https://peppefallitisindaco.it/</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://peppefallitisindaco.it/"/>
+    <image:image>
+      <image:loc>https://peppefallitisindaco.it/assets/img/peppe-hero.png</image:loc>
+      <image:title>Peppe Falliti candidato sindaco di Milazzo 2026</image:title>
+      <image:caption>Giuseppe Falliti detto Peppe Falliti, candidato sindaco di Milazzo con Controcorrente</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://peppefallitisindaco.it/assets/img/og-social-v2.jpg</image:loc>
+      <image:title>Peppe Falliti Sindaco - Elezioni Milazzo 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://peppefallitisindaco.it/assets/img/peppe-ismaele.jpg</image:loc>
+      <image:title>Peppe Falliti con Ismaele La Vardera - Controcorrente Milazzo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://peppefallitisindaco.it/assets/img/wwf.jpeg</image:loc>
+      <image:title>Peppe Falliti WWF Milazzo - Attivismo ambientale</image:title>
+    </image:image>
   </url>
+
 </urlset>
