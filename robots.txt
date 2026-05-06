@@ -6,6 +6,25 @@ Allow: /
 Disallow: /.claude/
 Disallow: /.git/
 
+# Social media scrapers — necessari per anteprime link (OG image)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
 # Bot AI — consenti indicizzazione per visibilita in risposte generative
 User-agent: GPTBot
 Allow: /
