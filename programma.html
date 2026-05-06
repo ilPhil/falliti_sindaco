@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Programma Elettorale | Peppe Falliti Candidato Sindaco Milazzo 2026</title>
+  <meta name="description" content="Programma amministrativo completo di Giuseppe Falliti detto Peppe Falliti, candidato sindaco di Milazzo con la lista Controcorrente. Elezioni comunali 2026." />
+  <link rel="canonical" href="https://peppefallitisindaco.it/programma" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <meta name="theme-color" content="#e85d04" />
+
+  <style>
+    :root {
+      --orange: #ee4124;
+      --dark-blue: #162840;
+      --white: #ffffff;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --font-headline: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      --font-body: 'PT Sans', Georgia, serif;
+    }
+
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/fonts/barlow/barlow-black.woff2') format('woff2'),
+           url('assets/fonts/barlow/barlow-black.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/fonts/barlow/barlow-extrabold.woff2') format('woff2'),
+           url('assets/fonts/barlow/barlow-extrabold.woff') format('woff');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/fonts/barlow/barlow-bold.woff2') format('woff2'),
+           url('assets/fonts/barlow/barlow-bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/fonts/barlow/barlow-semibold.woff2') format('woff2'),
+           url('assets/fonts/barlow/barlow-semibold.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      src: url('assets/fonts/barlow/barlow-regular.woff2') format('woff2'),
+           url('assets/fonts/barlow/barlow-regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PT Sans';
+      src: url('assets/fonts/ptsans/ptsans-regular.woff2') format('woff2'),
+           url('assets/fonts/ptsans/ptsans-regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PT Sans';
+      src: url('assets/fonts/ptsans/ptsans-italic.woff2') format('woff2'),
+           url('assets/fonts/ptsans/ptsans-italic.woff') format('woff');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PT Sans';
+      src: url('assets/fonts/ptsans/ptsans-bold.woff2') format('woff2'),
+           url('assets/fonts/ptsans/ptsans-bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--gray-700);
+      background: var(--white);
+    }
+
+    /* ── BACK LINK ── */
+    .topbar {
+      padding: 28px 32px 0;
+      max-width: 740px;
+      margin: 0 auto;
+    }
+    .topbar-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gray-500);
+      text-decoration: none;
+      font-family: var(--font-headline);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .topbar-back:hover { color: var(--orange); }
+
+    /* ── DOCUMENTO ── */
+    .doc-wrap {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 32px 32px 80px;
+    }
+
+    /* Titolo principale */
+    .doc-title {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(52px, 7vw, 88px);
+      line-height: 0.92;
+      letter-spacing: 1px;
+      color: var(--dark-blue);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    .doc-title .hl-top {
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+    .doc-title .hl {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      padding: 0px 18px 8px;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      transform: rotate(-5deg);
+      transform-origin: left center;
+      margin-left: 8px;
+      margin-bottom: -20px;
+      margin-top: 12px;
+    }
+
+    /* Sezioni */
+    .doc-section {
+      margin-bottom: 48px;
+    }
+
+    /* Titoli di sezione (h2) */
+    .doc-section h2 {
+      font-family: var(--font-headline);
+      font-weight: 800;
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.1;
+      color: var(--dark-blue);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--orange);
+    }
+
+    /* Numerazione ambiti */
+    .doc-section h2 .num {
+      color: var(--orange);
+      margin-right: 6px;
+    }
+
+    /* Titoli di sotto-sezione (h3) */
+    .doc-section h3 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gray-700);
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    /* Paragrafi */
+    .doc-section p {
+      margin-bottom: 14px;
+      color: var(--gray-700);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* Liste */
+    .doc-section ul {
+      margin: 0 0 16px 0;
+      padding-left: 20px;
+    }
+    .doc-section ul li {
+      margin-bottom: 6px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--gray-700);
+    }
+    .doc-section ul li::marker {
+      color: var(--orange);
+    }
+
+    /* Intro speciale */
+    .doc-intro {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--gray-600);
+      margin-bottom: 48px;
+      padding: 24px 28px;
+      border-left: 4px solid var(--orange);
+      background: #fff8f4;
+    }
+
+
+    @media (max-width: 600px) {
+      .doc-wrap { padding: 24px 20px 60px; }
+      .topbar { padding: 20px 20px 0; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACK -->
+  <div class="topbar">
+    <a href="index.html" class="topbar-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      Torna alla home
+    </a>
+  </div>
+
+  <!-- DOCUMENTO -->
+  <div class="doc-wrap">
+
+    <h1 class="doc-title"><span class="hl-top">Il programma</span><span class="hl">elettorale</span></h1>
+
+    <!-- INTRO -->
+    <div class="doc-intro">
+      <p><strong>Milazzo — Patto per una crescita sostenibile.</strong> Dall'esperienza di persone che hanno dedicato la propria vita alla tutela ed al progresso di Milazzo, si concretizza un progetto che vede protagonista il cittadino per la rinascita del territorio. Occorre ribaltare completamente i paradigmi, prendersi cura realmente delle fasce deboli, affrontare le urgenze, ripartire dalle persone, dalle radici e dalle vocazioni dei luoghi, risolvere i veri problemi di Milazzo e dei milazzesi con interventi mirati ed una visione globale e sostenibile.</p>
+      <p>Grazie al dialogo con i cittadini, abbiamo raccolto informazioni, necessità e disagi, e sviluppato una visione condivisa.</p>
+    </div>
+
+    <!-- LA NOSTRA VISIONE -->
+    <div class="doc-section">
+      <h2>La nostra visione</h2>
+      <p>Una visione coraggiosa, ma concreta ed attuabile con l'aiuto di tutti. Una serie di idee e metodi per ridare vitalità alla città, ripartendo da un progetto concreto, da dinamiche sostenibili, da una riduzione degli sprechi, da un uso intelligente delle risorse, per valorizzare ed esaltare il potenziale del territorio e dare una nuova speranza al presente ed al futuro identitario di Milazzo e dei suoi cittadini.</p>
+      <p>Milazzo merita di più del clientelismo, di prospettive improvvisate e miopi. Il nostro impegno è per una città che non si accontenti, che ponga la Salute, il Lavoro ed il Benessere di TUTTI i cittadini prima di ogni altra cosa. Oggi, andare controcorrente significa scegliere la via più difficile ma più giusta: quella della verità e della legalità.</p>
+      <p>La nostra amministrazione sarà sinonimo di porte aperte, Democrazia, collaborazione e dialogo con la gente, ascolto costante, tutela e valorizzazione dell'Identità di Milazzo attraverso azioni concrete.</p>
+    </div>
+
+    <!-- ANALISI -->
+    <div class="doc-section">
+      <h2>Analisi e prospettive</h2>
+      <p>Milazzo è una città dal potenziale enorme ma oggi in evidente difficoltà: popolazione in calo, esodo giovanile, disoccupazione alta e un'economia a rischio. Eppure porto, mare, cultura e natura offrono opportunità straordinarie.</p>
+      <h3>Punti di forza</h3>
+      <ul>
+        <li>Posizione geografica unica: città-penisola, paesaggi marini, Capo Milazzo, Riserva Naturale.</li>
+        <li>Porto strategico: hub naturale per le Isole Eolie, traffico merci e logistica.</li>
+        <li>Patrimonio storico-culturale rilevante: Castello di Milazzo, Borgo Antico.</li>
+        <li>Potenziale turistico elevato: cultura, natura, mare, sport, congressi.</li>
+        <li>Comunità attiva: associazioni ambientaliste, animaliste, culturali e sportive.</li>
+        <li>Vocazioni territoriali: agricoltura, florovivaismo, pesca, artigianato.</li>
+        <li>Possibilità di accesso a fondi esterni (Regione, Stato, Europa, Privati).</li>
+      </ul>
+      <h3>Criticità</h3>
+      <ul>
+        <li>Servizi sociali carenti con scarsa attenzione per le fasce deboli.</li>
+        <li>Tasso di disoccupazione significativo.</li>
+        <li>Declino demografico e fuga dei giovani: da 32.000 (2001) a 29.830 (2025).</li>
+        <li>Grave carenza di verde pubblico e spazi per bambini e anziani.</li>
+        <li>Gravi carenze del servizio sanitario e dell'ospedale.</li>
+        <li>Tessuto commerciale fragile, tasse comunali altissime.</li>
+        <li>Assenza di pianificazione urbanistica (PUG non ancora attivo).</li>
+        <li>Criticità ambientale molto alta dovuta al polo industriale.</li>
+        <li>Pressione fiscale elevatissima; debito pro capite elevato (~350€ per cittadino).</li>
+      </ul>
+      <h3>Opportunità</h3>
+      <ul>
+        <li>Nuova pianificazione urbanistica (PUG e PUDM): occasione storica.</li>
+        <li>Collaborazioni con Eolie, Valle del Mela, Tindari, Barcellona.</li>
+        <li>Transizione ecologica e riconversione industriale: green e blue economy.</li>
+        <li>Cultura e Beni Culturali come risorsa per sviluppo sostenibile.</li>
+        <li>Porto come motore economico: intermodalità e logistica avanzata.</li>
+        <li>Digitalizzazione e snellimento della PA.</li>
+        <li>Bilancio partecipato e democrazia diretta.</li>
+      </ul>
+      <h3>Minacce</h3>
+      <ul>
+        <li>Logiche clientelari diffuse.</li>
+        <li>Dipendenza eccessiva dai fondi esterni.</li>
+        <li>Inquinamento atmosferico e marino.</li>
+        <li>Calo demografico continuo.</li>
+        <li>Sfiducia dei cittadini verso l'amministrazione.</li>
+        <li>Vulnerabilità climatica: erosione costiera, rischio idrogeologico.</li>
+        <li>Stagnazione amministrativa senza una rottura netta.</li>
+      </ul>
+    </div>
+
+    <!-- OBIETTIVI -->
+    <div class="doc-section">
+      <h2>Obiettivi principali</h2>
+      <ul>
+        <li>Restituire la Dignità ad ogni cittadino, favorire lo sviluppo, lavorare sul welfare per garantire ad ognuno: Lavoro, Abitazione, Sanità, qualità della vita e ambientale ottimale.</li>
+        <li>Mettere il cittadino al centro ripartendo da una reale democrazia partecipata.</li>
+        <li>Favorire investimenti in cultura e formazione, ricostruire il rapporto identitario tra tessuto sociale, città, ambiente e storia.</li>
+      </ul>
+    </div>
+
+    <!-- 1. SANITÀ E AMBIENTE -->
+    <div class="doc-section">
+      <h2><span class="num">1.</span>Sanità e Ambiente</h2>
+      <p>Presenza incisiva nella conferenza dei sindaci per la Sanità. Rilancio dell'ospedale, della medicina territoriale e dei servizi socio-sanitari come motore di nuova occupazione qualificata. Transizione ecologica con osservatorio ambientale, bonifiche, riconversione energetica, riforestazione e Piano del Verde.</p>
+      <h3>Sanità</h3>
+      <ul>
+        <li>Presenza incisiva nella conferenza dei sindaci per la Sanità.</li>
+        <li>Impegno per il rilancio dell'Ospedale "G. Fogliani" con potenziamento reparti e piano straordinario (PS, Pediatria, Oncologia).</li>
+        <li>Riportare le ambulanze a Milazzo.</li>
+        <li>Gestione dei TSO efficace.</li>
+        <li>Potenziamento del supporto psico-sociologico comunale.</li>
+        <li>Rafforzamento medicina territoriale, screening e prevenzione patologie ambientali.</li>
+        <li>Relazione Sanitaria Annuale del Sindaco.</li>
+        <li>Protocollo con ASP per monitoraggio patologie ambientali e registro tumori.</li>
+        <li>Progetto "La Salute a Casa Tua".</li>
+        <li>Sindaco-medico come sentinella della salute pubblica.</li>
+        <li>Uso del potere di ordinanza in caso di rischio sanitario.</li>
+        <li>Sportello di ascolto per giovani e persone in difficoltà, con sostegno psicologico.</li>
+        <li>Canile e gattile dignitosi; studio per istituzione di un servizio veterinario comunale volontario. Colonie feline.</li>
+      </ul>
+      <h3>Ambiente</h3>
+      <ul>
+        <li>Osservatorio Ambientale Civico indipendente con pubblicazione dati in tempo reale.</li>
+        <li>Prevenzione ambientale, monitoraggio della qualità dell'aria e delle acque. Monitoraggio del porto.</li>
+        <li>Tavolo permanente con RAM e industrie per mitigazione rischi e tecnologie a basso impatto.</li>
+        <li>Fondo di compensazione ambientale finanziato dalle industrie.</li>
+        <li>Piano "Milazzo a Impatto Zero". Politiche di riduzione delle plastiche.</li>
+        <li>Bonifica aree industriali dismesse.</li>
+        <li>Riforestazione urbana e periurbana, creazione di parchi.</li>
+        <li>Campagne risparmio idrico ed energetico.</li>
+        <li>Censimento arboreo, tutela biodiversità, "albero per ogni neonato".</li>
+        <li>Rinaturalizzazione aree cementificate e lotta alle isole di calore.</li>
+        <li>Monitoraggio dell'inquinamento indoor in scuole e uffici pubblici.</li>
+        <li>Scuole verdi, sentieri urbani, aiuole sensoriali.</li>
+        <li>Sportello energia. Mobilità sostenibile: bici, mezzi elettrici, pedonalizzazioni.</li>
+      </ul>
+      <h3>Verde pubblico</h3>
+      <ul>
+        <li>Piano Urbano del Verde con incremento delle alberature e delle aree verdi.</li>
+        <li>Studio per corridoi ecologici con Parchi Urbani.</li>
+        <li>Rifondazione della giardineria comunale e formazione del personale.</li>
+        <li>Istituzione: un albero per ogni nascita.</li>
+        <li>Riqualificazione e potenziamento parchi cittadini e alberature delle frazioni.</li>
+        <li>Riavvio procedure per istituzione "Riserva Terrestre Capo Milazzo".</li>
+        <li>Pulizia straordinaria Parchi, zone attrezzate, fontane e monumenti.</li>
+        <li>Implementazione del Protocollo S.I.A. (Società Italiana di Arboricoltura) per la valutazione di stabilità degli alberi.</li>
+      </ul>
+    </div>
+
+    <!-- 2. CULTURA, TURISMO E SPORT -->
+    <div class="doc-section">
+      <h2><span class="num">2.</span>Cultura, Turismo e Sport</h2>
+      <p>Trasformare il Castello e il territorio in un ecosistema culturale-turistico attivo tutto l'anno, capace di generare nuova occupazione attraverso eventi diffusi, partnership qualificate, recupero del patrimonio, marketing territoriale e una Destinazione Turistica Unica integrata con Eolie e comuni vicini.</p>
+      <h3>Cultura e Beni Culturali</h3>
+      <ul>
+        <li>Castello tutelato e potenziato: cittadella fortificata come cuore culturale e sociale del comprensorio attivo 365 giorni l'anno.</li>
+        <li>Attivazione iter per l'ottenimento dello Scudo Blu UNESCO (Convenzione dell'Aia del 1954).</li>
+        <li>Marina Garibaldi protetta e valorizzata come luogo culturale e sociale.</li>
+        <li>Recupero e riuso sociale, sportivo, turistico e culturale del Paladiana.</li>
+        <li>Tutela e valorizzazione dei Molini Lo Presti come "Porta del mare".</li>
+        <li>Gestione partnership pubblico-privato innovative.</li>
+        <li>Promozione di eventi diversificati, distribuiti su tutto il territorio e nell'arco dell'anno.</li>
+        <li>Cinema gratuito all'aperto nelle frazioni e nel centro.</li>
+        <li>Promozione culturale e tutela delle frazioni e delle comunità marinare.</li>
+        <li>Scuole di arti e mestieri, laboratori creativi, promozione di artigianato di qualità.</li>
+        <li>Inclusione di Vaccarella tra i borghi marinari siciliani.</li>
+        <li>Studio per l'attrazione ed una efficace permanenza dei nomadi digitali.</li>
+        <li>Itinerari tematici, percorsi storici, visite guidate.</li>
+        <li>Mostre diffuse, residenze artistiche, studio per musei cittadini diffusi.</li>
+        <li>Rifunzionalizzazione della Biblioteca, digitalizzazione, attività culturali.</li>
+      </ul>
+      <h3>Turismo</h3>
+      <ul>
+        <li>Promozione di turismo culturale, balneare, nautico, naturalistico, congressuale.</li>
+        <li>Destinazione Turistica Unica (DTU) con Eolie e comuni limitrofi.</li>
+        <li>Marketing territoriale e branding per la promozione di Milazzo nel mondo.</li>
+        <li>Valorizzazione della cultura marinara e contadina come riscoperta delle radici.</li>
+        <li>Turismo sostenibile: osservatorio turistico, energie rinnovabili nelle strutture ricettive.</li>
+        <li>Studio per la promozione del turismo della terza età.</li>
+        <li>Rete "Città albergo diffuso": itinerari turistici e percorsi naturalistici.</li>
+        <li>Valorizzazione del Percorso delle Casematte su tutto il territorio.</li>
+        <li>Piano spiagge e revisione PUG con censimento e salvaguardia delle concessioni.</li>
+        <li>No a modelli turistici estranei alla vocazione del territorio.</li>
+      </ul>
+      <h3>Sport</h3>
+      <ul>
+        <li>Rete piste ciclabili e pedonali.</li>
+        <li>Ricognizione degli impianti sportivi comunali e adeguamento con tecniche eco-sostenibili.</li>
+        <li>Consulta dello Sport e promozione eventi sportivi.</li>
+        <li>Programmi inclusivi di sport per la terza età, famiglie, persone con disabilità.</li>
+        <li>Progetto trasporti pubblici verso impianti sportivi.</li>
+        <li>Collaborazione con scuole, aziende, gruppi e associazioni sportive.</li>
+      </ul>
+    </div>
+
+    <!-- 3. URBANISTICA -->
+    <div class="doc-section">
+      <h2><span class="num">3.</span>Urbanistica e territorio</h2>
+      <p>PUG come motore di rinascita urbana ed economica: decementificazione, nuovi parchi, mobilità sostenibile e integrazione porto-città. Revisione del regolamento edilizio, digitalizzazione dei servizi, toponomastica identitaria e nuovi spazi di socialità.</p>
+      <ul>
+        <li>PUG – Piano Urbanistico Generale (priorità assoluta).</li>
+        <li>PUDM – Revisione Piano Utilizzo Demanio Marittimo.</li>
+        <li>Piano del Traffico, della mobilità ciclabile e pedonale.</li>
+        <li>Individuazione di zone di interscambio ai margini del centro cittadino.</li>
+        <li>Decementificazione e rinaturalizzazione aree cementificate, ripristino permeabilità dei suoli.</li>
+        <li>Modello "Città dei 15 minuti", visione interconnessa nel progetto integrato di mobilità sostenibile.</li>
+        <li>Studio per il recupero dell'antico tracciato ferroviario.</li>
+        <li>Salvaguardia e protezione del tessuto storico, anche della piana.</li>
+        <li>Realizzazione di parchi pubblici alberati e spazi ludici per bambini e famiglie.</li>
+        <li>Revisione regolamento edilizio.</li>
+        <li>Percorsi culturali urbani, valorizzazione e cura sentieri naturalistici.</li>
+        <li>Revisione toponomastica legata a identità e storia locale.</li>
+        <li>Porto-città-ferrovia-viabilità extraurbana: studio integrazione urbanistica.</li>
+        <li>Tavolo tecnico con la città metropolitana per monitoraggio alberatura e stato delle strade provinciali.</li>
+        <li>Incremento aree pedonali, cicloparcheggi e servizi per i ciclisti.</li>
+        <li>Studio per nuove aree per l'edilizia popolare.</li>
+        <li>Miglioramento del portale per le pratiche di edilizia privata.</li>
+      </ul>
+    </div>
+
+    <!-- 4. LAVORI PUBBLICI -->
+    <div class="doc-section">
+      <h2><span class="num">4.</span>Lavori pubblici</h2>
+      <p>Monitoraggio e riqualificazione di servizi a rete, viabilità, reti idriche e fognarie, cura del lungomare, dell'arredo urbano, dell'efficientamento energetico e delle strutture sportive, per attivare cantieri diffusi e migliorare la vivibilità.</p>
+      <ul>
+        <li>Rivisitazione piano delle opere pubbliche.</li>
+        <li>Istituzione albo dei tecnici e rotazione obbligatoria degli incarichi con coinvolgimento quota giovani laureati.</li>
+        <li>Risoluzione criticità per prevenzione degli allagamenti.</li>
+        <li>Valorizzazione del Lungomare di Ponente.</li>
+        <li>Revisione illuminazione pubblica.</li>
+        <li>Ripristino del decoro ed arredo urbano e sul lungomare.</li>
+        <li>Riqualificazione e potenziamento strutture esistenti nelle frazioni per spazi collettivi.</li>
+        <li>Efficientamento energetico edifici pubblici e pubblica illuminazione.</li>
+        <li>Installazione su tutto il territorio di bagni pubblici autopulenti.</li>
+        <li>Potenziamento delle strutture per lo sport.</li>
+        <li>Risoluzione criticità reti idriche e fognarie; coordinamento campagne risparmio idrico.</li>
+        <li>Aree pedonali e infrastrutture per mobilità sostenibile. Parcheggi di interscambio.</li>
+        <li>Sistemazione dei marciapiedi dissestati.</li>
+        <li>Manutenzione del patrimonio storico.</li>
+        <li>Cancellazione del "Parco Traimari" e realizzazione di un parco pubblico nel vecchio scalo ferroviario.</li>
+        <li>Cura e ripristino dei muretti a secco nei sentieri antichi della città.</li>
+        <li>Sicurezza del territorio: valutazione dissesti costone roccioso del promontorio.</li>
+        <li>Studio e risoluzione delle problematiche legate all'erosione delle spiagge (Vaccarella).</li>
+      </ul>
+    </div>
+
+    <!-- 5. AFFARI GENERALI -->
+    <div class="doc-section">
+      <h2><span class="num">5.</span>Affari generali</h2>
+      <p>Rendere il Comune realmente accessibile e trasparente attraverso URP riorganizzato, sito web semplificato, sportelli decentrati e partecipazione civica strutturata. Digitalizzazione, formazione del personale, relazioni istituzionali multilivello e forte attrazione di fondi europei e nazionali.</p>
+      <ul>
+        <li>Riorganizzazione degli uffici e dei servizi comunali.</li>
+        <li>Amministrazione a porte aperte e trasparenza.</li>
+        <li>Sportello del Cittadino e dell'Opposizione.</li>
+        <li>Riorganizzazione URP. Istituzione sportello telematico segnalazione disservizi con verifica tracciabile.</li>
+        <li>Revisione sito web comunale e semplificazione accesso agli atti.</li>
+        <li>Agenda pubblica del Sindaco.</li>
+        <li>Assemblee civiche mensili nei quartieri.</li>
+        <li>Istituzione dei comitati di quartiere e relativa consulta.</li>
+        <li>Digitalizzazione della macchina comunale.</li>
+        <li>Corsi di formazione per il personale comunale.</li>
+        <li>Rapporti multilivello con Regione, Stato, UE.</li>
+        <li>Attrazione fondi europei e nazionali.</li>
+        <li>Decentramento uffici con sportelli comunali nelle frazioni.</li>
+      </ul>
+    </div>
+
+    <!-- 6. POLIZIA COMUNALE -->
+    <div class="doc-section">
+      <h2><span class="num">6.</span>Polizia comunale</h2>
+      <p>Rafforzare il controllo del territorio attraverso la riorganizzazione della Polizia Municipale, l'istituzione del vigile di quartiere, il presidio delle aree periferiche e sistemi avanzati contro le discariche abusive. Una politica sanzionatoria più trasparente e orientata al cittadino.</p>
+      <ul>
+        <li>Valorizzazione e riorganizzazione della Polizia Municipale.</li>
+        <li>Maggiore controllo del territorio e tutela ambientale.</li>
+        <li>Istituzione del vigile di quartiere.</li>
+        <li>Sicurezza ed educazione stradale in collaborazione con le scuole.</li>
+        <li>Revisione delle pratiche sanzionatorie, con campagne preventive di informazione.</li>
+        <li>Maggiore sostegno e monitoraggio nelle aree periferiche e nelle frazioni.</li>
+        <li>Implementazione di sistemi per la prevenzione ed il controllo delle discariche abusive.</li>
+        <li>Protezione Civile: resilienza preventiva, droni, AI, GIS e monitoraggio intelligente.</li>
+        <li>Sicurezza balneare: bagnini comunali e droni di salvataggio.</li>
+        <li>Rischio industriale: monitoraggio continuo e comunicazione trasparente.</li>
+        <li>Rete della Resilienza: formazione e valorizzazione del volontariato civico.</li>
+        <li>Tavolo Intercomunale: sistema coordinato con comuni limitrofi.</li>
+      </ul>
+    </div>
+
+    <!-- 7. LAVORO, ECONOMIA E BILANCIO -->
+    <div class="doc-section">
+      <h2><span class="num">7.</span>Lavoro, Economia e Bilancio</h2>
+      <p>Indirizzare il bilancio comunale sul potenziamento delle risorse interne, attrarre fondi e partenariati, finanziare investimenti strategici. Ridurre gradualmente la pressione fiscale e creare nuova occupazione sostenendo PMI, commercio, agricoltura, pesca e artigianato.</p>
+      <h3>Bilancio</h3>
+      <ul>
+        <li>Istituzione Commissione speciale per lo studio e la risoluzione della fase dissestuale.</li>
+        <li>Necessità di riduzione pressione fiscale nel medio periodo.</li>
+        <li>Miglioramento riscossione e recupero crediti con strategie differenziate.</li>
+        <li>Bilancio partecipato per le frazioni.</li>
+        <li>Fondo di compensazione ambientale (privati).</li>
+        <li>Attrazione fondi europei, statali, regionali, investimenti privati.</li>
+        <li>Partenariato pubblico-privato (PPP).</li>
+        <li>Gestione patrimonio e oneri di urbanizzazione.</li>
+      </ul>
+      <h3>Economia e Lavoro</h3>
+      <ul>
+        <li>Creazione di un Polo ad alta specializzazione multidisciplinare per attrazione finanziamenti e nuova occupazione.</li>
+        <li>Incentivi per PMI e commercio locale; istituzione fondo emergenza PMI.</li>
+        <li>Agevolazioni fiscali per attività in crisi.</li>
+        <li>Attivazione dialogo per prezzi ridotti sui carburanti (zona franca).</li>
+        <li>Diversificazione economica verso green e blue economy.</li>
+        <li>Il porto come risorsa economica.</li>
+        <li>Potenziamento delle vocazioni territoriali: agricoltura, florovivaismo, pesca, agroalimentare, artigianato.</li>
+        <li>Strategie di sviluppo del turismo come motore economico.</li>
+        <li>Sgravi fiscali alle famiglie che offrono ospitalità agli studenti delle isole.</li>
+        <li>Studio per sgravi fiscali per le attività commerciali che riducono l'uso della plastica.</li>
+        <li>Attivazione tavolo tecnico per la riduzione delle tariffe dei trasporti verso le isole.</li>
+      </ul>
+    </div>
+
+    <!-- 8. SERVIZI SOCIALI E WELFARE -->
+    <div class="doc-section">
+      <h2><span class="num">8.</span>Servizi sociali e Welfare</h2>
+      <p>Azioni ad alto impatto con priorità agli ultimi ed alle fasce deboli: rafforzamento dei servizi sociali e del welfare con interventi mirati per giovani, famiglie, anziani e persone con disabilità, trasformando ogni misura in un volano occupazionale.</p>
+      <h3>Giovani</h3>
+      <ul>
+        <li>Riattivazione Consulta/Forum giovanile.</li>
+        <li>Progetti per la prevenzione e la riduzione del disagio giovanile.</li>
+        <li>Sostegno scolastico e doposcuola agli studenti con fragilità e disagi familiari.</li>
+        <li>Promozione di progetti NEET e consulenza normativa.</li>
+        <li>Programmi e strategie per ostelli della gioventù.</li>
+        <li>Coinvolgimento giovani in progetti culturali e turistici, scambi culturali e gemellaggi.</li>
+      </ul>
+      <h3>Famiglia</h3>
+      <ul>
+        <li>Aiuti alle famiglie in difficoltà.</li>
+        <li>Promozione di attività a favore di donne vittime di violenza e progetto "Casa rifugio locale".</li>
+        <li>Politiche familiari integrate.</li>
+        <li>Attività intergenerazionali (Nonno che racconta, Nonno che legge).</li>
+        <li>Studio per la realizzazione di una mensa comunale con volontariato.</li>
+      </ul>
+      <h3>Anziani</h3>
+      <ul>
+        <li>Progetto "BenEssere Anziani".</li>
+        <li>Spazi di socializzazione e animazione sociale settimanale.</li>
+        <li>Radio Nonno (con partenariato).</li>
+        <li>Scuola di mestieri e apprendistato.</li>
+        <li>Contrasto isolamento sociale.</li>
+      </ul>
+      <h3>Inclusione e disabilità</h3>
+      <ul>
+        <li>Sport inclusivo.</li>
+        <li>Accessibilità impianti sportivi.</li>
+        <li>Servizi di prossimità nelle frazioni.</li>
+        <li>Studio del potenziamento trasporto pubblico verso servizi essenziali.</li>
+      </ul>
+      <h3>Associazionismo e volontariato</h3>
+      <ul>
+        <li>Elaborazione e applicazione politiche di integrazione.</li>
+        <li>Revisione albo associazioni e consulte.</li>
+        <li>Consulta del volontariato e delle libere Associazioni.</li>
+        <li>Spazi per attività istituzionali, sociali, incontri e convegni.</li>
+        <li>Censimento e potenziamento centri sociali.</li>
+      </ul>
+    </div>
+
+  </div><!-- /doc-wrap -->
+
+
+</body>
+</html>
