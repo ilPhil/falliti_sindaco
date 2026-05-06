@@ -41,4 +41,7 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+# Host canonico
+Host: peppefallitisindaco.it
+
 Sitemap: https://peppefallitisindaco.it/sitemap.xml
